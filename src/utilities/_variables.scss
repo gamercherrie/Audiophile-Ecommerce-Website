@@ -1,6 +1,7 @@
 $font: 'Manrope', sans-serif;
 $black: #000000;
 $white: #FFFFFF;
+$light-gray: #F1F1F1;
 
 .display-mobile-only {
     display: none !important;
@@ -8,5 +9,13 @@ $white: #FFFFFF;
     {
         display: block!important;
     }
-        
+
+}
+
+.display-desktop-only {
+    display: block !important;
+    @media only screen and (max-width: 991px)
+    {
+        display: none !important;
+    }
 }

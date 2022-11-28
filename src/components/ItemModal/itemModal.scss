@@ -1,0 +1,13 @@
+@import '../../utilities/variables';
+
+.modal{
+    &__container{
+        background-color: $light-gray;
+        border-radius: 8px;
+        height: 16.5rem;
+        width: 32.7rem;
+    }
+    &__object-image {
+        width: 8rem;
+    }
+}
