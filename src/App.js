@@ -1,11 +1,14 @@
-import { Navbar, Header } from './components';
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Homepage } from './pages';
 import './App.scss';
 
 const App = () => (
-  <div className="app">
-    <Navbar />
-    <Header />
-  </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Homepage/>} />
+      </Routes>
+    </BrowserRouter>
 );
 
-export default App;
+export default App

@@ -27,7 +27,6 @@ const Navbar = () => {
                 </div>
                 <div className="navbar__cart"><img src={Cart} alt="Checkout Cart"/></div>
             </div>
-            <div className="navbar__container-line display-desktop-only"></div>
             {navBarOpen &&  
                 <div className="navbar__modal display-mobile-only">
                     <div className="navbar__modal-container">

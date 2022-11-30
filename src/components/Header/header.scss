@@ -1,11 +1,65 @@
 @import '../../utilities/variables';
 
-.header__container {
-    width: 100%;
-    background: linear-gradient( rgba(0, 0, 0),rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1) ), url('../../assets/home/mobile/image-header.svg');
-    height: 60rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0 -10rem;
+.header{
+    &__container {
+        width: 100%;
+        background: linear-gradient( rgba(0, 0, 0),rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1) ), url('../../assets/home/mobile/image-header.svg');
+        height: 50rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0 -10rem;
+    }
+    &__info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 50rem;
+        p{
+            text-align: center;
+            color: $white;
+            margin: 0 2.4rem;
+        }
+        p:first-child{
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 1.9rem;
+            letter-spacing: 1rem;
+            text-transform: uppercase;
+            opacity: 0.5;
+        }
+        p:nth-of-type(2) {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 3.6rem;
+            line-height: 4rem;
+            letter-spacing: 1.28571px;
+            text-transform: uppercase;
+            padding-top: 3.5rem;
+        }
+        p:nth-of-type(3){
+            font-weight: 500;
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+            opacity: 0.75;
+            padding-top: 2.4rem;
+        }
+        button {
+            width: 16rem;
+            background-color: $primary-orange;
+            color: $white;
+            border: none;
+            outline: none;
+            padding: 1.5rem;
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 18px;
+            font-family: 'Manrope';
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-top: 4.3rem;
+            cursor: pointer;
+        }
+    }
 
 }

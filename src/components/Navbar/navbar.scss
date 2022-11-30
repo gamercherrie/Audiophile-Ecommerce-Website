@@ -7,15 +7,7 @@
         justify-content: space-around;
         padding: 3.5rem 0;
         background-color: $black;
-
-        &-line{
-            width: 118rem;
-            height: 3px;
-            background: $white;
-            mix-blend-mode: normal;
-            opacity: 0.2;
-            margin: 0 13.5rem 0 13.5rem;
-        }
+        border-bottom: 1px solid rgba(255,255,255,.25);
     }
 
     &__menu {
@@ -47,6 +39,8 @@
         height: 75rem;
         width: 37.5rem;
         border-radius: 0px 0px 8px 8px;
+        position: absolute;
+        z-index: 1;
         
         &-container {
             display: flex;
