@@ -1,0 +1,11 @@
+@import '../../utilities/variables';
+
+.header__container {
+    width: 100%;
+    background: linear-gradient( rgba(0, 0, 0),rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1) ), url('../../assets/home/mobile/image-header.svg');
+    height: 60rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 -10rem;
+
+}

@@ -5,6 +5,7 @@ import CloseMenu from './shared/tablet/x-solid.svg';
 import XX99MarkOneHeadphones from './shared/desktop/image-category-thumbnail-headphones.png';
 import Speakers from './shared/desktop/image-category-thumbnail-speakers.png';
 import Earphones from './shared/desktop/image-category-thumbnail-earphones.png';
+import HomepageHeadphones from './home/mobile/image-header.jpg';
 
 export {
     Logo, 
@@ -13,5 +14,6 @@ export {
     CloseMenu,
     XX99MarkOneHeadphones,
     Speakers, 
-    Earphones
+    Earphones,
+    HomepageHeadphones
 };
