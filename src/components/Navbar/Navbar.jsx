@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import './navbar.scss';
 import { ItemModal } from '../index';
-import { Logo, Cart, HamburgerMenu, CloseMenu, XX99MarkOneHeadphones, Speakers } from "../../assets";
+import { Logo, Cart, HamburgerMenu, CloseMenu, XX99MarkOneHeadphones, Speakers, Earphones } from "../../assets";
 
 const Navbar = () => {
 
@@ -30,9 +30,11 @@ const Navbar = () => {
             <div className="navbar__container-line display-desktop-only"></div>
             {navBarOpen &&  
                 <div className="navbar__modal display-mobile-only">
-                    <ItemModal item={XX99MarkOneHeadphones} itemName="HEADPHONES"/>
-                    <ItemModal item={Speakers} itemName="SPEAKERS"/>
-                    <ItemModal item={XX99MarkOneHeadphones} itemName="EARPHONES"/>
+                    <div className="navbar__modal-container">
+                        <ItemModal item={XX99MarkOneHeadphones} itemName="HEADPHONES"/>
+                        <ItemModal item={Speakers} itemName="SPEAKERS"/>
+                        <ItemModal item={Earphones} itemName="EARPHONES"/>
+                    </div>
                 </div>
             }
         </div>

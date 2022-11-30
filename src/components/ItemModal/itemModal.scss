@@ -1,13 +1,45 @@
 @import '../../utilities/variables';
 
 .modal{
-    &__container{
+    &__card{
         background-color: $light-gray;
         border-radius: 8px;
         height: 16.5rem;
         width: 32.7rem;
+        text-align: center;
+
+        p {
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 20px;
+            text-align: center;
+            letter-spacing: 1.07143px;
+            text-transform: uppercase;
+            color: #000000;
+            margin: 0 0 1.7rem 0;
+        }
+        a {
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 18px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #5e5e5e;
+            margin-top: 1.7rem;
+        }
+        a img {
+            padding-left: 1.3rem;
+            width: .5rem;
+        }
+        &-container {
+            height: 21.7rem;
+            width: 32.7rem;
+            display: flex;
+            align-items: flex-end;
+        }
     }
     &__object-image {
-        width: 8rem;
+        width: 14rem; 
+        margin-top: -5rem;
     }
 }

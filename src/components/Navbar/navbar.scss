@@ -43,11 +43,18 @@
         }
     }
     &__modal{
-        background-color: $black;
+        background-color: $white;
         height: 75rem;
         width: 37.5rem;
         border-radius: 0px 0px 8px 8px;
         
+        &-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 73.5rem;
+        }
     }
    
 }
