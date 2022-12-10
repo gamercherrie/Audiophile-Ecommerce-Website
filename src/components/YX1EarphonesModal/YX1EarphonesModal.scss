@@ -1,0 +1,35 @@
+.YX1EarphonesModal{
+    &__container{
+        &-product-image{
+            background-image: url('../../assets/home/mobile/image-earphones-yx1.jpg');
+            margin-top: 2.4rem;
+            background-size: cover;
+            width: 32.7rem;
+            border-radius: 8px;
+            height: 20rem;
+        }
+        &-content{
+            width: 32.7rem;
+            background-color: #F1F1F1;
+            border-radius: 8px;
+            margin-top: 2.4rem;
+            margin-bottom: 6rem;
+        }
+    }
+    &__content-desc{
+        padding: 4.1rem 2.4rem;
+        p{
+            font-weight: 700;
+            font-size: 2.8rem;
+            line-height: 3.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            color: #000000;
+        }
+        .YX1EarphonesModal__button {
+            border: 1px solid black;
+            color: black;
+        }
+    }
+}

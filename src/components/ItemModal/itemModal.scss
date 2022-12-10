@@ -6,7 +6,9 @@
         border-radius: 8px;
         height: 16.5rem;
         width: 32.7rem;
-        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
 
         p {
             font-weight: 700;
@@ -26,10 +28,12 @@
             text-transform: uppercase;
             color: #5e5e5e;
             margin-top: 1.7rem;
+            display: flex;
         }
         a img {
-            padding-left: 1.3rem;
-            width: .5rem;
+            padding-left: 1rem;
+            margin-top: 0.2rem;
+            height: 13px;
         }
         &-container {
             height: 21.7rem;

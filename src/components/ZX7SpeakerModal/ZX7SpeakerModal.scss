@@ -1,0 +1,30 @@
+.ZX7SpeakerModal{
+    &__container{
+        background-image: url('../../assets/home/mobile/image-speaker-zx7.jpg');
+        background-position: -1rem 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 2.4rem;
+    }
+    &__content {
+        padding: 10.1rem 0 10.1rem 2.4rem;
+        p{
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 38px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            color: #000000;
+        }
+
+        .ZX7SpeakerModal__button {
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 18px;
+            text-transform: uppercase;
+            color: #000000;
+            border: 1px solid black;
+        }
+    }
+}

@@ -6,6 +6,7 @@ import XX99MarkOneHeadphones from './shared/desktop/image-category-thumbnail-hea
 import Speakers from './shared/desktop/image-category-thumbnail-speakers.png';
 import Earphones from './shared/desktop/image-category-thumbnail-earphones.png';
 import HomepageHeadphones from './home/mobile/image-header.jpg';
+import ZX9Speakers from './home/mobile/image-speaker-zx9.png';
 
 export {
     Logo, 
@@ -15,5 +16,6 @@ export {
     XX99MarkOneHeadphones,
     Speakers, 
     Earphones,
-    HomepageHeadphones
+    HomepageHeadphones,
+    ZX9Speakers
 };
