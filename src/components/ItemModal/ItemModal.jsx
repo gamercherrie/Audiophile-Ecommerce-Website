@@ -1,6 +1,9 @@
 import React from 'react';
+import { Link } from "react-router-dom";
+
 import './itemModal.scss'
 import IconArrow from '../../assets/shared/desktop/icon-arrow-right.svg';
+
 
 const ItemModal = (props) => {
     const{ item, itemName, itemLink } = props;
@@ -9,7 +12,7 @@ const ItemModal = (props) => {
             <div className="modal__card">
                 <img src={item} alt="Mark One-XX99 Headphones" className="modal__object-image"/>
                 <p>{itemName}</p>
-                <a href={itemLink}>SHOP<img src={IconArrow}/></a>
+                <Link to={"/" + itemLink}>SHOP<img src={IconArrow}/></Link>
             </div>
         </div>
     )

@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { Link } from "react-router-dom";
 import './navbar.scss';
 import { ItemModal } from '../index';
 import { Logo, Cart, HamburgerMenu, CloseMenu, XX99MarkOneHeadphones, Speakers, Earphones } from "../../assets";
@@ -20,19 +21,19 @@ const Navbar = () => {
                 </div>
                 <div className="navbar__logo"><img src={Logo} alt="Website Logo"/></div>
                 <div className="navbar__menu display-desktop-only">
-                    <a href="#">HOME</a>
-                    <a href="#">HEADPHONES</a>
-                    <a href="#">SPEAKERS</a>
-                    <a href="#">EARPHONES</a>
+                   <Link to="/">HOME</Link>
+                   <Link to="/headphones">HEADPHONES</Link>
+                   <Link to="/speakers">SPEAKERS</Link>
+                   <Link to="/earphones">EARPHONES</Link>
                 </div>
                 <div className="navbar__cart"><img src={Cart} alt="Checkout Cart"/></div>
             </div>
             {navBarOpen &&  
                 <div className="navbar__modal display-mobile-only">
                     <div className="navbar__modal-container">
-                        <ItemModal item={XX99MarkOneHeadphones} itemName="HEADPHONES"/>
-                        <ItemModal item={Speakers} itemName="SPEAKERS"/>
-                        <ItemModal item={Earphones} itemName="EARPHONES"/>
+                        <ItemModal item={XX99MarkOneHeadphones} itemName="HEADPHONES" itemLink="headphones"/>
+                        <ItemModal item={Speakers} itemName="SPEAKERS" itemLink="speakers"/>
+                        <ItemModal item={Earphones} itemName="EARPHONES" itemLink="earphones"/>
                     </div>
                 </div>
             }

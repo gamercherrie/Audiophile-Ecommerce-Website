@@ -7,6 +7,15 @@ import Speakers from './shared/desktop/image-category-thumbnail-speakers.png';
 import Earphones from './shared/desktop/image-category-thumbnail-earphones.png';
 import HomepageHeadphones from './home/mobile/image-header.jpg';
 import ZX9Speakers from './home/mobile/image-speaker-zx9.png';
+import FacebookIcon from './shared/desktop/icon-facebook.svg';
+import InstagramIcon from './shared/desktop/icon-instagram.svg';
+import TwitterIcon from './shared/desktop/icon-twitter.svg'; 
+import XX99MarkTwoHeadphones from './shared/desktop/image-xx99-mark-two-headphones.jpg'
+import XX99MarkOneHeadphonesFilled from './shared/desktop/image-xx99-mark-one-headphones.jpg'
+import XX59Headphones from './shared/desktop/image-xx59-headphones.jpg'
+import ZX9SpeakersFilled from './shared/desktop/image-zx9-speaker.jpg'
+import ZX7SpeakersFilled from './shared/desktop/image-zx7-speaker.jpg'
+import YX1WirelessEarphones from './product-yx1-earphones/mobile/image-product.jpg'
 
 export {
     Logo, 
@@ -17,5 +26,14 @@ export {
     Speakers, 
     Earphones,
     HomepageHeadphones,
-    ZX9Speakers
+    ZX9Speakers,
+    FacebookIcon,
+    InstagramIcon,
+    TwitterIcon,
+    XX99MarkTwoHeadphones,
+    XX99MarkOneHeadphonesFilled,
+    XX59Headphones, 
+    ZX9SpeakersFilled,
+    ZX7SpeakersFilled,
+    YX1WirelessEarphones
 };

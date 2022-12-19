@@ -1,6 +1,6 @@
 import React from 'react';
 import './homepage.scss';
-import { Navbar, Header, ItemModal, ZX9SpeakerModal, ZX7SpeakerModal, Aboutus } from '../../components';
+import { Navbar, Header, ItemModal, ZX9SpeakerModal, ZX7SpeakerModal, Aboutus, Footer } from '../../components';
 import { XX99MarkOneHeadphones, Speakers, Earphones } from '../../assets';
 import YX1EarphonesModal from '../../components/YX1EarphonesModal/YX1EarphonesModal';
 
@@ -10,9 +10,9 @@ const Homepage = () => {
             <Navbar/>
             <Header/>
             <div className="homepage__item-modal">
-                <ItemModal item={XX99MarkOneHeadphones} itemName="HEADPHONES"/>
-                <ItemModal item={Speakers} itemName="SPEAKERS"/>
-                <ItemModal item={Earphones} itemName="EARPHONES"/>
+                <ItemModal item={XX99MarkOneHeadphones} itemName="HEADPHONES" itemLink="headphones"/>
+                <ItemModal item={Speakers} itemName="SPEAKERS" itemLink="speakers"/>
+                <ItemModal item={Earphones} itemName="EARPHONES" itemLink="earphones"/>
             </div>
             <div className="homepage__features">
                 <ZX9SpeakerModal />
@@ -20,6 +20,7 @@ const Homepage = () => {
                 <YX1EarphonesModal />
             </div>
             <Aboutus />
+            <Footer />
         </React.Fragment>
     )
 }
