@@ -1,8 +1,9 @@
 import { Button } from '@chakra-ui/react';
-
+import { Link } from 'react-router-dom'
 const ProductButton = (props) => {
-    const { backgroundColor, customButtonClass } = props;
+    const { backgroundColor, customButtonClass, buttonLink } = props;
     return(
+      <Link to={buttonLink}>
         <Button
             bg = {backgroundColor}
             color = 'white'
@@ -22,6 +23,7 @@ const ProductButton = (props) => {
         >
             See Product
         </Button>
+      </Link>
     )
 }
 

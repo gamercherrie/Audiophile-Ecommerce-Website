@@ -17,7 +17,7 @@ const ProductModal = (props) => {
         <p>{newProduct}</p>
         <p>{productName}</p>
         <p>{productDescription}</p>
-        <ProductButton backgroundColor="#D87D4A"/>
+        <ProductButton backgroundColor="#D87D4A" buttonLink={productLink}/>
     </Container>
   )
 }
