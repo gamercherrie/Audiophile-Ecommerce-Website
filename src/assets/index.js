@@ -16,6 +16,10 @@ import XX59Headphones from './shared/desktop/image-xx59-headphones.jpg'
 import ZX9SpeakersFilled from './shared/desktop/image-zx9-speaker.jpg'
 import ZX7SpeakersFilled from './shared/desktop/image-zx7-speaker.jpg'
 import YX1WirelessEarphones from './product-yx1-earphones/mobile/image-product.jpg'
+import ProductMarkTwoG1 from './product-xx99-mark-two-headphones/mobile/image-gallery-1.jpg'
+import ProductMarkTwoG2 from './product-xx99-mark-two-headphones/mobile/image-gallery-2.jpg'
+import ProductMarkTwoG3 from './product-xx99-mark-two-headphones/mobile/image-gallery-3.jpg'
+import XX99MarkIFeature from './shared/mobile/image-xx99-mark-one-headphones.jpg'
 
 export {
     Logo, 
@@ -35,5 +39,9 @@ export {
     XX59Headphones, 
     ZX9SpeakersFilled,
     ZX7SpeakersFilled,
-    YX1WirelessEarphones
+    YX1WirelessEarphones,
+    ProductMarkTwoG1,
+    ProductMarkTwoG2,
+    ProductMarkTwoG3,
+    XX99MarkIFeature
 };
