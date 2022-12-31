@@ -5,3 +5,4 @@ export { default as EarphonesPage } from './EarphonesPage/EarphonesPage';
 export { default as XX99MarkIIPage } from './MarkII-XX99/XX99MarkIIPage';
 export { default as XX99MarkIPage } from './MarkI-XX99/XX99MarkIPage';
 export { default as XX59Page } from './XX59Page/XX59Page.jsx'
+export { default as ZX9Page } from './ZX9Speaker/ZX9Page.jsx'

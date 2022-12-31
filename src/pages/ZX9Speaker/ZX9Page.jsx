@@ -2,37 +2,37 @@ import React from 'react'
 import { Navbar, ProductAddToCartModal, YouMayAlsoLike, ItemModal, Aboutus, Footer} from '../../components'
 import 
   {
-    XX59Headphones,
+    ZX9SpeakersFilled,
     XX99MarkOneHeadphones,
-    ProductX59G1,
-    ProductX59G2,
-    ProductX59G3,
+    ProductZX9G1,
+    ProductZX9G2,
+    ProductZX9G3,
     XX99MarkIFeature,
-    ZX9SpeakerFeature,
+    XX59Feature,
     Speakers,
     Earphones,
-    XX99MarkIIFeature
+    ZX7Feature
   } from '../../assets'
 
-const XX59Page = () => {
+const ZX9Page = () => {
   return (
     <React.Fragment>
     <Navbar />
     <ProductAddToCartModal 
-      ImageofProduct={XX59Headphones}
-      productTitle="XX59 Headphones"
+      ImageofProduct={ZX9SpeakersFilled}
+      productTitle="ZX9 Speaker"
     />
     <div className="featured-photos__container">
-      <img src={ProductX59G1} alt="featured"/>
-      <img src={ProductX59G2} alt="featured"/>
-      <img src={ProductX59G3} alt="featured"/>
+      <img src={ProductZX9G1} alt="featured"/>
+      <img src={ProductZX9G2} alt="featured"/>
+      <img src={ProductZX9G3} alt="featured"/>
     </div>
     <div className="featured__products">
       <h1>You may also like</h1>
       <YouMayAlsoLike 
-        FeaturedProduct={XX99MarkIIFeature} 
-        FeaturedProductTitle="XX99 Mark II"
-        FeaturedLink="/headphones/XX99MarkIIHeadphones"
+        FeaturedProduct={ZX7Feature} 
+        FeaturedProductTitle="ZX7 Speaker"
+        FeaturedLink="/headphones/ZX7Speakers"
         />
         <YouMayAlsoLike 
         FeaturedProduct={XX99MarkIFeature} 
@@ -40,9 +40,9 @@ const XX59Page = () => {
         FeaturedLink="/headphones/XX99MarkIHeadphones"
         />
         <YouMayAlsoLike 
-        FeaturedProduct={ZX9SpeakerFeature} 
-        FeaturedProductTitle="ZX9 Speaker"
-        FeaturedLink="/speakers/ZX9Speakers"
+        FeaturedProduct={XX59Feature} 
+        FeaturedProductTitle="XX59"
+        FeaturedLink="/headphones/XX59Headphones"
         />
     </div>
     <div className="featured__item-modal">
@@ -56,4 +56,4 @@ const XX59Page = () => {
   )
 }
 
-export default XX59Page
+export default ZX9Page

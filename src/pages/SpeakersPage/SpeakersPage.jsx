@@ -21,6 +21,7 @@ const SpeakersPage = () => {
             productName="ZX9 Speaker"
             productDescription="Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups."
             newProduct="new product"
+            productLink="/speakers/ZX9Speakers"
         />
          <ProductModal 
             productImage={ZX7SpeakersFilled}

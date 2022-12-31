@@ -43,6 +43,7 @@ const XX99MarkIPage = () => {
             <YouMayAlsoLike 
             FeaturedProduct={ZX9SpeakerFeature} 
             FeaturedProductTitle="ZX9 Speaker"
+            FeaturedLink="/speakers/ZX9Speakers"
             />
         </div>
         <div className="featured__item-modal">

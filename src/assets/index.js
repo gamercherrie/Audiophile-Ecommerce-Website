@@ -29,6 +29,10 @@ import XX99MarkIIFeature from './shared/mobile/image-xx99-mark-two-headphones.jp
 import ProductX59G1 from './product-xx59-headphones/mobile/image-gallery-1.jpg'
 import ProductX59G2 from './product-xx59-headphones/mobile/image-gallery-2.jpg'
 import ProductX59G3 from './product-xx59-headphones/mobile/image-gallery-3.jpg'
+import ProductZX9G1 from './product-zx9-speaker/mobile/image-gallery-1.jpg'
+import ProductZX9G2 from './product-zx9-speaker/mobile/image-gallery-2.jpg'
+import ProductZX9G3 from './product-zx9-speaker/mobile/image-gallery-3.jpg'
+import ZX7Feature from './shared/mobile/image-zx7-speaker.jpg'
 
 export {
     Logo, 
@@ -61,5 +65,9 @@ export {
     XX99MarkIIFeature,
     ProductX59G1,
     ProductX59G2,
-    ProductX59G3
+    ProductX59G3,
+    ProductZX9G1,
+    ProductZX9G2,
+    ProductZX9G3,
+    ZX7Feature
 };
