@@ -17,9 +17,9 @@ const Navbar = () => {
         <div className="navbar">
             <div className="navbar__container">
                 <div className="navbar__menu-mobile display-mobile-only">
-                    <button type="button" onClick={handleToggle}><img src={navBarOpen? CloseMenu : HamburgerMenu}/></button>
+                    <button type="button" onClick={handleToggle}><img src={navBarOpen? CloseMenu : HamburgerMenu} alt="Navigation Button"/></button>
                 </div>
-                <div className="navbar__logo"><img src={Logo} alt="Website Logo"/></div>
+                <div className="navbar__logo"><Link to="/"><img src={Logo} alt="Website Logo"/></Link></div>
                 <div className="navbar__menu display-desktop-only">
                    <Link to="/">HOME</Link>
                    <Link to="/headphones">HEADPHONES</Link>

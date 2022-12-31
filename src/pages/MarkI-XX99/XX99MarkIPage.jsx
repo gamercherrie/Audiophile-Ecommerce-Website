@@ -1,39 +1,39 @@
 import React from 'react'
+import './XX99MarkIPage.scss'
 import { Navbar, ProductAddToCartModal, YouMayAlsoLike, ItemModal, Aboutus, Footer} from '../../components'
-import './XX99MarkIIPage.scss'
 import 
   {
-    XX99MarkTwoHeadphones,
-    ProductMarkTwoG1,
-    ProductMarkTwoG2,
-    ProductMarkTwoG3,
-    XX99MarkIFeature,
+    XX99MarkOneHeadphonesFilled,
+    XX99MarkOneHeadphones,
+    ProductMarkOneG1,
+    ProductMarkOneG2,
+    ProductMarkOneG3,
     XX59Feature,
     ZX9SpeakerFeature,
-    XX99MarkOneHeadphones,
     Speakers,
-    Earphones
-  }
-    from '../../assets'
-const XX99MarkIIPage = () => {
+    Earphones,
+    XX99MarkIIFeature
+  } from '../../assets'
+
+const XX99MarkIPage = () => {
   return (
     <React.Fragment>
         <Navbar />
         <ProductAddToCartModal 
-          ImageofProduct={XX99MarkTwoHeadphones}
-          productTitle="XX99 Mark II Headphones"
+          ImageofProduct={XX99MarkOneHeadphonesFilled}
+          productTitle="XX99 Mark I Headphones"
         />
         <div className="featured-photos__container">
-          <img src={ProductMarkTwoG1} alt="featured"/>
-          <img src={ProductMarkTwoG2} alt="featured"/>
-          <img src={ProductMarkTwoG3} alt="featured"/>
+          <img src={ProductMarkOneG1} alt="featured"/>
+          <img src={ProductMarkOneG2} alt="featured"/>
+          <img src={ProductMarkOneG3} alt="featured"/>
         </div>
         <div className="featured__products">
           <h1>You may also like</h1>
           <YouMayAlsoLike 
-            FeaturedProduct={XX99MarkIFeature} 
-            FeaturedProductTitle="XX99 Mark I"
-            FeaturedLink="/headphones/XX99MarkIHeadphones"
+            FeaturedProduct={XX99MarkIIFeature} 
+            FeaturedProductTitle="XX99 Mark II"
+            FeaturedLink="/headphones/XX99MarkIIHeadphones"
             />
             <YouMayAlsoLike 
             FeaturedProduct={XX59Feature} 
@@ -56,4 +56,4 @@ const XX99MarkIIPage = () => {
   )
 }
 
-export default XX99MarkIIPage
+export default XX99MarkIPage

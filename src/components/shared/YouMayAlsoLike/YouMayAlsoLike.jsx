@@ -3,7 +3,7 @@ import ProductButton from '../Button/ProductButton'
 import './YouMayAlsoLike.scss'
 
 const YouMayAlsoLike = (props) => {
-  const {FeaturedProduct, FeaturedProductTitle } = props
+  const {FeaturedProduct, FeaturedProductTitle, FeaturedLink} = props
 
   return (
     <div className="option__container">
@@ -13,6 +13,7 @@ const YouMayAlsoLike = (props) => {
             <ProductButton 
               backgroundColor="#D87D4A" 
               customButtonClass="option-product__button"
+              buttonLink={FeaturedLink}
             />
         </div>
     </div>

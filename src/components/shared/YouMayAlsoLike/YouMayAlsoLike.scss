@@ -1,11 +1,16 @@
-.option-product__container{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    h1{
-        padding-top: 32px;
+.option-product{
+    &__container{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        h1{
+            padding-top: 32px;
+        }
     }
-}
-.option-product__button{
-    margin-top: 0;
+    &__button{
+        margin-top: 0;
+    }
+    &__image{
+        margin-top: 40px;
+    }
 }

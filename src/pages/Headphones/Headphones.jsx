@@ -27,11 +27,13 @@ const Headphones = () => {
           productImage={XX99MarkOneHeadphonesFilled}
           productName="XX99 MARK I HEADPHONES"
           productDescription="As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go."
+          productLink="/headphones/XX99MarkIHeadphones"
         />
         <ProductModal 
           productImage={XX59Headphones}
           productName="XX59 HEADPHONES"
           productDescription="Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move."
+          productLink="/headphones/XX59Headphones"
         />
         <div className="modal__container">
           <ItemModal item={XX99MarkOneHeadphones} itemName="HEADPHONES" itemLink="headphones"/>

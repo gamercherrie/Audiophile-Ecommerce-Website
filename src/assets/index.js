@@ -20,6 +20,15 @@ import ProductMarkTwoG1 from './product-xx99-mark-two-headphones/mobile/image-ga
 import ProductMarkTwoG2 from './product-xx99-mark-two-headphones/mobile/image-gallery-2.jpg'
 import ProductMarkTwoG3 from './product-xx99-mark-two-headphones/mobile/image-gallery-3.jpg'
 import XX99MarkIFeature from './shared/mobile/image-xx99-mark-one-headphones.jpg'
+import XX59Feature from './shared/mobile/image-xx59-headphones.jpg'
+import ZX9SpeakerFeature from './shared/mobile/image-zx9-speaker.jpg'
+import ProductMarkOneG1 from './product-xx99-mark-one-headphones/mobile/image-gallery-1.jpg'
+import ProductMarkOneG2 from './product-xx99-mark-one-headphones/mobile/image-gallery-2.jpg'
+import ProductMarkOneG3 from './product-xx99-mark-one-headphones/mobile/image-gallery-3.jpg'
+import XX99MarkIIFeature from './shared/mobile/image-xx99-mark-two-headphones.jpg'
+import ProductX59G1 from './product-xx59-headphones/mobile/image-gallery-1.jpg'
+import ProductX59G2 from './product-xx59-headphones/mobile/image-gallery-2.jpg'
+import ProductX59G3 from './product-xx59-headphones/mobile/image-gallery-3.jpg'
 
 export {
     Logo, 
@@ -43,5 +52,14 @@ export {
     ProductMarkTwoG1,
     ProductMarkTwoG2,
     ProductMarkTwoG3,
-    XX99MarkIFeature
+    XX99MarkIFeature,
+    XX59Feature,
+    ZX9SpeakerFeature,
+    ProductMarkOneG1,
+    ProductMarkOneG2,
+    ProductMarkOneG3,
+    XX99MarkIIFeature,
+    ProductX59G1,
+    ProductX59G2,
+    ProductX59G3
 };
