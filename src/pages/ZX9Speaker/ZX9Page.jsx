@@ -32,7 +32,7 @@ const ZX9Page = () => {
       <YouMayAlsoLike 
         FeaturedProduct={ZX7Feature} 
         FeaturedProductTitle="ZX7 Speaker"
-        FeaturedLink="/headphones/ZX7Speakers"
+        FeaturedLink="/speakers/ZX7Speakers"
         />
         <YouMayAlsoLike 
         FeaturedProduct={XX99MarkIFeature} 

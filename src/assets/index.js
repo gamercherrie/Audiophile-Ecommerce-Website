@@ -33,6 +33,13 @@ import ProductZX9G1 from './product-zx9-speaker/mobile/image-gallery-1.jpg'
 import ProductZX9G2 from './product-zx9-speaker/mobile/image-gallery-2.jpg'
 import ProductZX9G3 from './product-zx9-speaker/mobile/image-gallery-3.jpg'
 import ZX7Feature from './shared/mobile/image-zx7-speaker.jpg'
+import ProductZX7G1 from './product-zx7-speaker/mobile/image-gallery-1.jpg'
+import ProductZX7G2 from './product-zx7-speaker/mobile/image-gallery-2.jpg'
+import ProductZX7G3 from './product-zx7-speaker/mobile/image-gallery-3.jpg'
+import YX1WirelessEarphonesFilled from './product-yx1-earphones/mobile/image-product.jpg'
+import ProductYX1G1 from './product-yx1-earphones/mobile/image-gallery-1.jpg'
+import ProductYX1G2 from './product-yx1-earphones/mobile/image-gallery-2.jpg'
+import ProductYX1G3 from './product-yx1-earphones/mobile/image-gallery-3.jpg'
 
 export {
     Logo, 
@@ -69,5 +76,12 @@ export {
     ProductZX9G1,
     ProductZX9G2,
     ProductZX9G3,
-    ZX7Feature
+    ZX7Feature,
+    ProductZX7G1,
+    ProductZX7G2,
+    ProductZX7G3,
+    YX1WirelessEarphonesFilled,
+    ProductYX1G1,
+    ProductYX1G2,
+    ProductYX1G3
 };

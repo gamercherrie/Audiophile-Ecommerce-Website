@@ -13,7 +13,7 @@ const ProductModal = (props) => {
       flexDirection="column"
       className="product-modal__container"
     >
-        <Box className="product-modal__image"><img src={productImage} alt="Product Image" /></Box>
+        <Box className="product-modal__image"><img src={productImage} alt="Product" /></Box>
         <p>{newProduct}</p>
         <p>{productName}</p>
         <p>{productDescription}</p>

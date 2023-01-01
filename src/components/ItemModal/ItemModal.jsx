@@ -12,7 +12,7 @@ const ItemModal = (props) => {
             <div className="modal__card">
                 <img src={item} alt="Mark One-XX99 Headphones" className="modal__object-image"/>
                 <p>{itemName}</p>
-                <Link to={"/" + itemLink}>SHOP<img src={IconArrow}/></Link>
+                <Link to={"/" + itemLink}>SHOP<img src={IconArrow} alt="icon arrow"/></Link>
             </div>
         </div>
     )

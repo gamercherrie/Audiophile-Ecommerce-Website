@@ -8,7 +8,7 @@ const YouMayAlsoLike = (props) => {
   return (
     <div className="option__container">
         <div className="option-product__container">
-            <div className="option-product__image"><img src={FeaturedProduct} /></div>
+            <div className="option-product__image"><img src={FeaturedProduct} alt="Featured Product"/></div>
             <h1>{FeaturedProductTitle}</h1>
             <ProductButton 
               backgroundColor="#D87D4A" 

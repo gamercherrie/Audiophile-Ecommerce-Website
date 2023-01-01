@@ -3,7 +3,7 @@ import { Container, Box } from '@chakra-ui/react'
 import { ProductButton } from '../index'
 import './YX1EarphonesModal.scss'
 
-const YX1EarphonesModal = () => {
+const YX1EarphonesModal = ({productLink}) => {
   return (
     <Container 
         display='flex' 
@@ -20,6 +20,7 @@ const YX1EarphonesModal = () => {
                 <ProductButton 
                     backgroundColor="transparent"
                     customButtonClass="YX1EarphonesModal__button"
+                    buttonLink={productLink}
                 />
             </div>
         </Box>

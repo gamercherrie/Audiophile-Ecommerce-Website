@@ -1,5 +1,4 @@
 import React from 'react'
-import { Container } from '@chakra-ui/react'
 import { Navbar, ProductModal, SectionHeader, ItemModal, Aboutus, Footer } from '../../components'
 import 
     { 
@@ -27,6 +26,7 @@ const SpeakersPage = () => {
             productImage={ZX7SpeakersFilled}
             productName="ZX7 Speaker"
             productDescription="Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use."
+            productLink="/speakers/ZX7Speakers"
         />
          <div className="modal__container">
           <ItemModal item={XX99MarkOneHeadphones} itemName="HEADPHONES" itemLink="headphones"/>

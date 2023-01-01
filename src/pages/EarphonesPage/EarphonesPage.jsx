@@ -16,9 +16,10 @@ const EarphonesPage = () => {
         <SectionHeader product="earphones"/>
         <ProductModal 
           productImage={YX1WirelessEarphones}
-          productName="YX1 Wireless Headphones"
+          productName="YX1 Wireless Earphones"
           productDescription="The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound."
           newProduct="new product"
+          productLink="/earphones/YX1WirelessEarphones"
         />
         <div className="modal__container">
           <ItemModal item={XX99MarkOneHeadphones} itemName="HEADPHONES" itemLink="headphones"/>

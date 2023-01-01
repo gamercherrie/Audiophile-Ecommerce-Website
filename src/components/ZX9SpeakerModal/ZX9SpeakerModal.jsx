@@ -3,7 +3,7 @@ import './ZX9SpeakerModal.scss'
 import { ZX9Speakers } from '../../assets';
 import { ProductButton } from '../index';
 
-const ZX9SpeakerModal = () => {
+const ZX9SpeakerModal = ({productLink}) => {
     return(
         <Container display="flex" justifyContent='center'>
             <Box
@@ -18,6 +18,7 @@ const ZX9SpeakerModal = () => {
                 <ProductButton 
                     backgroundColor="#000000" 
                     customButtonClass="ZX9SpeakerModal__button"
+                    buttonLink={productLink}
                 />
             </Box>
         </Container>

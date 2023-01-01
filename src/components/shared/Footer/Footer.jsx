@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Box } from '@chakra-ui/react'
+import { Container } from '@chakra-ui/react'
 import { Link } from 'react-router-dom' 
 import './Footer.scss'
 import { Logo, TwitterIcon, InstagramIcon, FacebookIcon} from '../../../assets'

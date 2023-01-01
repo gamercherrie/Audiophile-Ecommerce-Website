@@ -15,9 +15,9 @@ const Homepage = () => {
                 <ItemModal item={Earphones} itemName="EARPHONES" itemLink="earphones"/>
             </div>
             <div className="homepage__features">
-                <ZX9SpeakerModal />
-                <ZX7SpeakerModal />
-                <YX1EarphonesModal />
+                <ZX9SpeakerModal productLink="/speakers/ZX9Speakers"/>
+                <ZX7SpeakerModal productLink="/speakers/ZX7Speakers"/>
+                <YX1EarphonesModal productLink="/earphones/YX1WirelessEarphones"/>
             </div>
             <Aboutus />
             <Footer />

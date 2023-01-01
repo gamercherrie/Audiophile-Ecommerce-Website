@@ -3,7 +3,7 @@ import { Container, Box } from '@chakra-ui/react'
 import './ZX7SpeakerModal.scss'
 import ProductButton from '../shared/Button/ProductButton'
 
-const ZX7SpeakerModal = () => {
+const ZX7SpeakerModal = ({productLink}) => {
   return (
     <Container display="flex" justifyContent="center">
         <Box 
@@ -16,6 +16,7 @@ const ZX7SpeakerModal = () => {
                 <ProductButton 
                     backgroundColor="transparent" 
                     customButtonClass="ZX7SpeakerModal__button"
+                    buttonLink={productLink}
                 />
             </div>
         </Box>
