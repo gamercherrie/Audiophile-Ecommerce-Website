@@ -1,11 +1,21 @@
 .aboutus{
-    &__image-container{
+    &__container{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 6rem;
+    }
+    &__image{
         background-image: url('../../../assets/shared/mobile/image-best-gear.jpg');
         background-color: #F1F1F1;
         border-radius: 8px;
         width: 327px;
         height: 300px;
         background-size: cover;
+        @media only screen and (min-width: 768px){
+            width: 68.9rem;
+            background-image: url('../../../assets/shared/tablet/image-best-gear.jpg');
+        }
     }
     &__content{
         p:first-child {
@@ -17,6 +27,11 @@
             text-transform: uppercase;
             padding: 4rem 0 3.2rem 0;
             color: #000000;
+            @media only screen and (min-width: 768px){
+                font-size: 40px;
+                line-height: 44px;
+                padding: 4rem 10.8rem
+            }
             
             span{
                 color: #D87D4A;
@@ -30,6 +45,9 @@
             color: #000000;
             opacity: 0.5;
             padding: 0 2.4rem;
+            @media only screen and (min-width: 768px){
+                padding: 0rem 13rem;
+            }
         }
     }
 }

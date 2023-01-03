@@ -1,5 +1,12 @@
 .YX1EarphonesModal{
     &__container{
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        @media only screen and (min-width: 768px){
+            flex-direction: row;
+            align-items: flex-start;
+        }
         &-product-image{
             background-image: url('../../assets/home/mobile/image-earphones-yx1.jpg');
             margin-top: 2.4rem;
@@ -7,6 +14,12 @@
             width: 32.7rem;
             border-radius: 8px;
             height: 20rem;
+            @media only screen and (min-width: 768px){
+                width: 33.9rem;
+                height: 32rem;
+                margin-right: 1.1rem;
+                margin-top: 3.2rem;
+            }
         }
         &-content{
             width: 32.7rem;
@@ -14,10 +27,22 @@
             border-radius: 8px;
             margin-top: 2.4rem;
             margin-bottom: 6rem;
+            @media only screen and (min-width: 768px){
+                width: 33.9rem;
+                height: 32rem;
+                margin-top: 3.2rem;
+                display: flex;
+                justify-content: center;
+            }
         }
     }
     &__content-desc{
         padding: 4.1rem 2.4rem;
+        @media only screen and (min-width: 768px){
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
         p{
             font-weight: 700;
             font-size: 2.8rem;

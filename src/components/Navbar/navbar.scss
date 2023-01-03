@@ -50,11 +50,24 @@
             height: 73.5rem;
             background-color: $white;
             height: 75rem;
-            width: 37.5rem;
+            min-width: 100%;
             border-radius: 0px 0px 8px 8px;
             position: absolute;
             z-index: 1;
         }
     }
    
+}
+
+@media only screen and (min-width: 768px) {
+    .navbar{
+        &__modal{
+            &-container{
+                flex-direction: row;
+                padding-top: 4rem;
+                align-items: flex-start;
+                height: 34rem;
+            }
+        }
+    }
 }

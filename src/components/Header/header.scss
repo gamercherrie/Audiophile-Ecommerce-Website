@@ -7,7 +7,14 @@
         height: 50rem;
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: 0 -10rem;
+        background-position: center;
+        @media only screen and (min-width: 768px) {
+            height: 70rem;
+            background: url('../../assets/home/tablet/image-header.jpg');
+            background-position: 0 -14rem;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
     }
     &__info {
         display: flex;
@@ -15,6 +22,9 @@
         align-items: center;
         flex-direction: column;
         height: 50rem;
+        @media only screen and (min-width: 768px){
+            height: 70rem;
+        }
         p{
             text-align: center;
             color: $white;
@@ -36,6 +46,10 @@
             letter-spacing: 1.28571px;
             text-transform: uppercase;
             padding-top: 3.5rem;
+            @media only screen and (min-width: 768px) {
+                font-size: 5.6rem;
+                line-height: 5.8rem;
+            }
         }
         p:nth-of-type(3){
             font-weight: 500;
@@ -43,6 +57,9 @@
             line-height: 2.5rem;
             opacity: 0.75;
             padding-top: 2.4rem;
+            @media only screen and (min-width: 768px) {
+                margin: 0 21rem;
+            }
         }
     }
 

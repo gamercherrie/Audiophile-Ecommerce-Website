@@ -5,9 +5,8 @@ import ProductButton from '../shared/Button/ProductButton'
 
 const ZX7SpeakerModal = ({productLink}) => {
   return (
-    <Container display="flex" justifyContent="center">
+    <div>
         <Box 
-            width= "327px"
             borderRadius="8px"
             className="ZX7SpeakerModal__container"
         >
@@ -20,7 +19,7 @@ const ZX7SpeakerModal = ({productLink}) => {
                 />
             </div>
         </Box>
-    </Container>
+    </div>
   )
 }
 

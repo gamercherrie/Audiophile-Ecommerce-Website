@@ -1,16 +1,15 @@
-import { Container, Box } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 import './ZX9SpeakerModal.scss'
 import { ZX9Speakers } from '../../assets';
 import { ProductButton } from '../index';
 
 const ZX9SpeakerModal = ({productLink}) => {
     return(
-        <Container display="flex" justifyContent='center'>
+        <div>
             <Box
-                width='32.7rem'
                 backgroundColor= '#D87D4A'
                 borderRadius= '0.8rem'
-                className="ZX9SpeakerModal__container"
+                className="ZX9SpeakerModal__modal"
             >
                 <img src={ZX9Speakers} alt="ZX9 Speakers"/>
                 <p>ZX9 <br/>Speaker</p>
@@ -21,7 +20,7 @@ const ZX9SpeakerModal = ({productLink}) => {
                     buttonLink={productLink}
                 />
             </Box>
-        </Container>
+        </div>
     )
 }
 

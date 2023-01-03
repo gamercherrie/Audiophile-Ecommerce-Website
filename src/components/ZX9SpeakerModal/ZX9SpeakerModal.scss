@@ -1,5 +1,5 @@
 .ZX9SpeakerModal{
-    &__container {
+    &__modal {
         background-image: url('../../assets/home/desktop/pattern-circles.svg');
         background-repeat: no-repeat;
         background-size: 56rem 56.8rem;
@@ -7,6 +7,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 32.7rem;
+        @media only screen and (min-width: 768px){
+            width: 68.9rem;
+            background-position: -3rem -21rem;
+            background-size: 76rem 75.8rem;
+        }
 
         img{
             width:17.2rem;
@@ -25,6 +31,10 @@
             line-height: 4rem;
             font-size: 3.6rem;
             padding-top: 3rem;
+            @media only screen and (min-width: 768px){
+                font-size: 5.6rem;
+                line-height: 5.8rem;
+            }
         }
         p:nth-of-type(2) {
             font-weight: 500;
@@ -32,6 +42,9 @@
             line-height: 2.5rem;
             opacity: 0.75;
             padding-top: 2.4rem;
+            @media only screen and (min-width: 768px){
+                margin: 0 17rem;
+            }
         }
     }
     &__button {

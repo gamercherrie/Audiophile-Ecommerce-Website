@@ -1,14 +1,18 @@
 .footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100%;
+    @media only screen and (min-width: 768px){
+        align-items: flex-start;
+        padding: 0rem 4rem;
+    }
+
+    img {
+        margin: 48px 0;
+    }
     &__container{
         background-color: black;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-
-        img {
-            margin: 48px 0;
-        }
     }
     &__bar{
         background-color: #D87D4A;
@@ -25,9 +29,15 @@
         font-weight: 700;
         line-height: 25px;
         letter-spacing: 2px;
+        @media only screen and (min-width: 768px){
+            flex-direction: row;
+        }
 
         a{
             padding-bottom: 16px;
+            @media only screen and (min-width: 768px){
+                padding-right: 3.4rem;
+            }
         }
     }
     &__description {
@@ -38,6 +48,11 @@
         color: #FFFFFF;
         opacity: 0.5;
         margin: 32px 24px 0 24px;
+        @media only screen and (min-width: 768px){
+            text-align: start;
+            margin: 0;
+            padding-top: 1.6rem;
+        }
         
         p:first-child{
             margin-bottom: 48px;

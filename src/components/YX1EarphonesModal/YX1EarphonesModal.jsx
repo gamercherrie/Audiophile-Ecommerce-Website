@@ -5,11 +5,7 @@ import './YX1EarphonesModal.scss'
 
 const YX1EarphonesModal = ({productLink}) => {
   return (
-    <Container 
-        display='flex' 
-        flexDirection='column'
-        alignItems="center"
-    >
+    <div className="YX1EarphonesModal__container">
         <Box 
             className="YX1EarphonesModal__container-product-image"
         >
@@ -24,7 +20,7 @@ const YX1EarphonesModal = ({productLink}) => {
                 />
             </div>
         </Box>
-    </Container>
+    </div>
   )
 }
 
