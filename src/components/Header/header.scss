@@ -9,9 +9,9 @@
         background-size: cover;
         background-position: center;
         @media only screen and (min-width: 768px) {
-            height: 70rem;
+            height: 59rem;
             background: url('../../assets/home/tablet/image-header.jpg');
-            background-position: 0 -14rem;
+            background-position: 0 -12rem;
             background-repeat: no-repeat;
             background-size: cover;
         }
@@ -23,7 +23,7 @@
         flex-direction: column;
         height: 50rem;
         @media only screen and (min-width: 768px){
-            height: 70rem;
+            height: 59rem;
         }
         p{
             text-align: center;

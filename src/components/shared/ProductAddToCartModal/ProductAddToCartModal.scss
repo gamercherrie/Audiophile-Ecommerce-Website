@@ -1,10 +1,8 @@
 .add{
     &__container{
         margin: 16px 24px;
-        img {
-            border-radius: 8px;
-            margin-top: 24px;
-            margin-bottom: 32px;
+        @media only screen and (min-width: 768px){
+            margin: 16px 40px;
         }
        .new-product__container p {
             font-size: 14px;
@@ -13,6 +11,36 @@
             text-transform: uppercase;
             padding-bottom: 16px;
             color: #D87D4A;
+        }
+    }
+    &__content{
+        @media only screen and (min-width: 768px){
+            display: flex;
+        }
+        &-section2{
+            @media only screen and (min-width: 768px){
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-left: 6.9rem;
+                width: 50%;
+            }
+        }
+    }
+    &__image-container{
+        border-radius: 8px;
+        margin-top: 24px;
+        margin-bottom: 32px;
+        background-color: #F1F1F1;
+        img{
+            border-radius: 8px;
+            min-width: 100%;
+        }
+        @media only screen and (min-width: 768px){
+            width: 50%;
+            height: 48rem;
+            display: flex;
+            align-items: center;
         }
     }
     &__product-info{
@@ -135,6 +163,9 @@
     }
     &__contain{
         margin-top: 88px;
+        @media only screen and (min-width: 768px){
+            display: flex;
+        }
         h2{
             font-family: 'Manrope';
             font-weight: 700;
@@ -142,6 +173,11 @@
             line-height: 36px;
             letter-spacing: 1px;
             text-transform: uppercase;
+            @media only screen and (min-width: 768px){
+                font-size: 3.2rem;
+                line-height: 3.6rem;
+                padding-right: 16.4rem;
+            }
         }
         p{
             font-family: 'Manrope';
@@ -159,6 +195,9 @@
         }
         p:nth-of-type(1){
             padding-top: 20px;
+            @media only screen and (min-width: 768px){
+                padding: 0;
+            }
         }
 
     }

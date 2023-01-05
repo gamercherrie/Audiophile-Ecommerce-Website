@@ -25,27 +25,33 @@ const ZX7Page = () => {
           productTitle="ZX7 Speaker"
         />
         <div className="featured-photos__container">
-          <img src={ProductZX7G1} alt="featured"/>
-          <img src={ProductZX7G2} alt="featured"/>
-          <img src={ProductZX7G3} alt="featured"/>
+          <div className="featured-photos__container-section1">
+            <img src={ProductZX7G1} alt="featured"/>
+            <img src={ProductZX7G2} alt="featured"/>
+          </div>
+          <div className="featured-photos__container-section2">
+            <img src={ProductZX7G3} alt="featured"/>
+          </div>
         </div>
-        <div className="featured__products">
-          <h1>You may also like</h1>
-          <YouMayAlsoLike 
-            FeaturedProduct={ZX9SpeakerFeature} 
-            FeaturedProductTitle="ZX9 Speaker"
-            FeaturedLink="/speakers/ZX9Speakers"
-            />
-          <YouMayAlsoLike 
-            FeaturedProduct={XX99MarkIFeature} 
-            FeaturedProductTitle="XX99 Mark I"
-            FeaturedLink="/headphones/XX99MarkIHeadphones"
-            />
-            <YouMayAlsoLike 
-            FeaturedProduct={XX59Feature} 
-            FeaturedProductTitle="XX59"
-            FeaturedLink="/headphones/XX59Headphones"
-            />
+        <div className="featured__products-container">
+            <h1>You may also like</h1>
+          <div className="featured__products">
+            <YouMayAlsoLike
+              FeaturedProduct={ZX9SpeakerFeature}
+              FeaturedProductTitle="ZX9 Speaker"
+              FeaturedLink="/speakers/ZX9Speakers"
+              />
+            <YouMayAlsoLike
+              FeaturedProduct={XX99MarkIFeature}
+              FeaturedProductTitle="XX99 Mark I"
+              FeaturedLink="/headphones/XX99MarkIHeadphones"
+              />
+              <YouMayAlsoLike
+              FeaturedProduct={XX59Feature}
+              FeaturedProductTitle="XX59"
+              FeaturedLink="/headphones/XX59Headphones"
+              />
+          </div>
         </div>
         <div className="featured__item-modal">
             <ItemModal item={XX99MarkOneHeadphones} itemName="HEADPHONES" itemLink="headphones"/>

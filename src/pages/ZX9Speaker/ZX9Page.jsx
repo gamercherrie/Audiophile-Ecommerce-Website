@@ -17,33 +17,39 @@ import
 const ZX9Page = () => {
   return (
     <React.Fragment>
-    <Navbar />
-    <ProductAddToCartModal 
-      ImageofProduct={ZX9SpeakersFilled}
-      productTitle="ZX9 Speaker"
-    />
-    <div className="featured-photos__container">
-      <img src={ProductZX9G1} alt="featured"/>
-      <img src={ProductZX9G2} alt="featured"/>
-      <img src={ProductZX9G3} alt="featured"/>
-    </div>
-    <div className="featured__products">
-      <h1>You may also like</h1>
-      <YouMayAlsoLike 
-        FeaturedProduct={ZX7Feature} 
-        FeaturedProductTitle="ZX7 Speaker"
-        FeaturedLink="/speakers/ZX7Speakers"
-        />
-        <YouMayAlsoLike 
-        FeaturedProduct={XX99MarkIFeature} 
-        FeaturedProductTitle="XX99 Mark I"
-        FeaturedLink="/headphones/XX99MarkIHeadphones"
-        />
-        <YouMayAlsoLike 
-        FeaturedProduct={XX59Feature} 
-        FeaturedProductTitle="XX59"
-        FeaturedLink="/headphones/XX59Headphones"
-        />
+      <Navbar />
+      <ProductAddToCartModal 
+        ImageofProduct={ZX9SpeakersFilled}
+        productTitle="ZX9 Speaker"
+      />
+      <div className="featured-photos__container">
+        <div className="featured-photos__container-section1">
+          <img src={ProductZX9G1} alt="featured"/>
+          <img src={ProductZX9G2} alt="featured"/>
+        </div>
+        <div className="featured-photos__container-section2">
+          <img src={ProductZX9G3} alt="featured"/>
+        </div>
+      </div>
+      <div className="featured__products-container">
+        <h1>You may also like</h1>
+        <div className="featured__products">
+          <YouMayAlsoLike
+            FeaturedProduct={ZX7Feature}
+            FeaturedProductTitle="ZX7 Speaker"
+            FeaturedLink="/speakers/ZX7Speakers"
+            />
+            <YouMayAlsoLike
+            FeaturedProduct={XX99MarkIFeature}
+            FeaturedProductTitle="XX99 Mark I"
+            FeaturedLink="/headphones/XX99MarkIHeadphones"
+            />
+            <YouMayAlsoLike
+            FeaturedProduct={XX59Feature}
+            FeaturedProductTitle="XX59"
+            FeaturedLink="/headphones/XX59Headphones"
+            />
+      </div>
     </div>
     <div className="featured__item-modal">
         <ItemModal item={XX99MarkOneHeadphones} itemName="HEADPHONES" itemLink="headphones"/>
@@ -52,7 +58,7 @@ const ZX9Page = () => {
     </div>
     <Aboutus />
     <Footer />
-</React.Fragment>
+  </React.Fragment>
   )
 }
 

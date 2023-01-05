@@ -1,4 +1,5 @@
 import React from 'react'
+import './headphones.scss'
 import { Navbar, SectionHeader, ProductModal, ItemModal, Aboutus, Footer} from '../../components'
 import 
   { 

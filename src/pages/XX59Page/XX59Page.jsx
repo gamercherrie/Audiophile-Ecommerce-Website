@@ -17,42 +17,48 @@ import
 const XX59Page = () => {
   return (
     <React.Fragment>
-    <Navbar />
-    <ProductAddToCartModal 
-      ImageofProduct={XX59Headphones}
-      productTitle="XX59 Headphones"
-    />
-    <div className="featured-photos__container">
-      <img src={ProductX59G1} alt="featured"/>
-      <img src={ProductX59G2} alt="featured"/>
-      <img src={ProductX59G3} alt="featured"/>
-    </div>
-    <div className="featured__products">
-      <h1>You may also like</h1>
-      <YouMayAlsoLike 
-        FeaturedProduct={XX99MarkIIFeature} 
-        FeaturedProductTitle="XX99 Mark II"
-        FeaturedLink="/headphones/XX99MarkIIHeadphones"
-        />
-        <YouMayAlsoLike 
-        FeaturedProduct={XX99MarkIFeature} 
-        FeaturedProductTitle="XX99 Mark I"
-        FeaturedLink="/headphones/XX99MarkIHeadphones"
-        />
-        <YouMayAlsoLike 
-        FeaturedProduct={ZX9SpeakerFeature} 
-        FeaturedProductTitle="ZX9 Speaker"
-        FeaturedLink="/speakers/ZX9Speakers"
-        />
-    </div>
-    <div className="featured__item-modal">
-        <ItemModal item={XX99MarkOneHeadphones} itemName="HEADPHONES" itemLink="headphones"/>
-        <ItemModal item={Speakers} itemName="SPEAKERS" itemLink="speakers"/>
-        <ItemModal item={Earphones} itemName="EARPHONES" itemLink="earphones"/>
-    </div>
-    <Aboutus />
-    <Footer />
-</React.Fragment>
+      <Navbar />
+      <ProductAddToCartModal 
+        ImageofProduct={XX59Headphones}
+        productTitle="XX59 Headphones"
+      />
+      <div className="featured-photos__container">
+        <div className="featured-photos__container-section1">
+          <img src={ProductX59G1} alt="featured"/>
+          <img src={ProductX59G2} alt="featured"/>
+        </div>
+        <div className="featured-photos__container-section2">
+          <img src={ProductX59G3} alt="featured"/>
+        </div>
+      </div>
+      <div className="featured__products-container">
+        <h1>You may also like</h1>
+        <div className="featured__products">
+          <YouMayAlsoLike
+            FeaturedProduct={XX99MarkIIFeature}
+            FeaturedProductTitle="XX99 Mark II"
+            FeaturedLink="/headphones/XX99MarkIIHeadphones"
+            />
+            <YouMayAlsoLike
+            FeaturedProduct={XX99MarkIFeature}
+            FeaturedProductTitle="XX99 Mark I"
+            FeaturedLink="/headphones/XX99MarkIHeadphones"
+            />
+            <YouMayAlsoLike
+            FeaturedProduct={ZX9SpeakerFeature}
+            FeaturedProductTitle="ZX9 Speaker"
+            FeaturedLink="/speakers/ZX9Speakers"
+            />
+        </div>
+      </div>
+      <div className="featured__item-modal">
+          <ItemModal item={XX99MarkOneHeadphones} itemName="HEADPHONES" itemLink="headphones"/>
+          <ItemModal item={Speakers} itemName="SPEAKERS" itemLink="speakers"/>
+          <ItemModal item={Earphones} itemName="EARPHONES" itemLink="earphones"/>
+      </div>
+      <Aboutus />
+      <Footer />
+  </React.Fragment>
   )
 }
 

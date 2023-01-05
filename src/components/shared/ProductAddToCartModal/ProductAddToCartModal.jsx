@@ -23,18 +23,22 @@ const ProductAddToCartModal = (props) => {
   return (
     <div className="add__container">
        <button className="add__button" onClick={() => navigate(-1)}>Go Back</button>
-       <img src={ImageofProduct} alt={selectedProduct.name}/>
-       <div className="new-product__container">
-        {newProduct === true ? <p>NEW PRODUCT</p> : null }
-        </div>
-       <div className="add__product-info">
-         <h1>{productTitle}</h1>
-         <p>{selectedProduct.description}</p>
-         <p>${productPrice.toLocaleString()}</p>
-       </div>
-       <div className="add__button-container">
-        <QuantityControls />
-        <AddToCartButton />
+       <div className="add__content">
+         <div className="add__image-container"><img src={ImageofProduct} alt={selectedProduct.name}/></div>
+         <div className="add__content-section2">
+           <div className="new-product__container">
+            {newProduct === true ? <p>NEW PRODUCT</p> : null }
+            </div>
+           <div className="add__product-info">
+             <h1>{productTitle}</h1>
+             <p>{selectedProduct.description}</p>
+             <p>${productPrice.toLocaleString()}</p>
+           </div>
+           <div className="add__button-container">
+            <QuantityControls />
+            <AddToCartButton />
+           </div>
+         </div>
        </div>
        <Feature 
         featureDescription={selectedProduct.features} 
@@ -93,10 +97,14 @@ const Feature = ({featureDescription, featuredItem}) => {
         <p>{featureDescription}</p>
       </div>
       <div className="feature__contain">
-        <h2>In the Box</h2>
-        {featuredItem.map((item) => (
-          <p>{item.quantity}x<span>{item.item}</span></p>
-        ))}
+        <div className="feature__header">
+          <h2>In the Box</h2>
+        </div>
+        <div className="feature__items">
+          {featuredItem.map((item) => (
+            <p>{item.quantity}x<span>{item.item}</span></p>
+          ))}
+        </div>
       </div>
     </>
   
