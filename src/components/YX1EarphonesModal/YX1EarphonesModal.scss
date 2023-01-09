@@ -20,6 +20,13 @@
                 margin-right: 1.1rem;
                 margin-top: 3.2rem;
             }
+            @media only screen and (min-width: 1024px){
+                width: 41rem;
+            }
+            @media only screen and (min-width: 1440px){
+                width: 54rem;
+                margin-right: 3rem;
+            }
         }
         &-content{
             width: 32.7rem;
@@ -34,6 +41,14 @@
                 display: flex;
                 justify-content: center;
             }
+            @media only screen and (min-width: 1024px){
+                width: 41rem;
+            }
+            @media only screen and (min-width: 1440px){
+                width: 54rem;
+                justify-content: flex-start;
+            }
+            
         }
     }
     &__content-desc{
@@ -42,6 +57,9 @@
             display: flex;
             justify-content: center;
             flex-direction: column;
+        }
+        @media only screen and (min-width: 1440px){
+            margin-left: 9.5rem;
         }
         p{
             font-weight: 700;

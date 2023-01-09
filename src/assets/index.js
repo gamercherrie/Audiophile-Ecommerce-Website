@@ -6,7 +6,7 @@ import XX99MarkOneHeadphones from './shared/desktop/image-category-thumbnail-hea
 import Speakers from './shared/desktop/image-category-thumbnail-speakers.png';
 import Earphones from './shared/desktop/image-category-thumbnail-earphones.png';
 import HomepageHeadphones from './home/mobile/image-header.jpg';
-import ZX9Speakers from './home/mobile/image-speaker-zx9.png';
+import ZX9Speakers from './home/desktop/image-speaker-zx9.png';
 import FacebookIcon from './shared/desktop/icon-facebook.svg';
 import InstagramIcon from './shared/desktop/icon-instagram.svg';
 import TwitterIcon from './shared/desktop/icon-twitter.svg'; 
@@ -18,7 +18,7 @@ import ZX7SpeakersFilled from './shared/desktop/image-zx7-speaker.jpg'
 import YX1WirelessEarphones from './product-yx1-earphones/mobile/image-product.jpg'
 import ProductMarkTwoG1 from './product-xx99-mark-two-headphones/mobile/image-gallery-1.jpg'
 import ProductMarkTwoG2 from './product-xx99-mark-two-headphones/mobile/image-gallery-2.jpg'
-import ProductMarkTwoG3 from './product-xx99-mark-two-headphones/mobile/image-gallery-3.jpg'
+import ProductMarkTwoG3 from './product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg'
 import XX99MarkIFeature from './shared/desktop/image-xx99-mark-one-headphones.jpg'
 import XX59Feature from './shared/desktop/image-xx59-headphones.jpg'
 import ZX9SpeakerFeature from './shared/desktop/image-zx9-speaker.jpg'

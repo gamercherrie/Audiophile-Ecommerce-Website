@@ -13,10 +13,31 @@
             background-position: -3rem -21rem;
             background-size: 76rem 75.8rem;
         }
+        @media only screen and (min-width: 1024px){
+            width: 83.8rem;
+            background-position: -15rem -5rem;
+            flex-direction: row;
+            height: 48rem;
+        }
+        @media only screen and (min-width: 1440px){
+            width: 111rem;
+            height: 56rem;
+            background-position: -17rem -9rem;
+            background-size: 91rem 92.8rem;
+
+        }
 
         img{
             width:17.2rem;
             margin: 5.5rem 0 3.2rem 0;
+            @media only screen and (min-width: 1024px){
+                width: 33rem;
+                margin: 7.6rem 4rem 0 6rem;
+            }
+            @media only screen and (min-width: 1024px){
+                width: 41rem;
+                margin: 5.6rem 13.8rem 0 7rem;
+            }
         }
 
         p{
@@ -24,6 +45,9 @@
             letter-spacing: 1.28571px;
             color: #FFFFFF;
             margin: 0 1.8rem;
+            @media only screen and (min-width: 1024px){
+                text-align: left;
+            }
         }
         p:nth-of-type(1) {
             font-weight: 700;
@@ -35,6 +59,10 @@
                 font-size: 5.6rem;
                 line-height: 5.8rem;
             }
+            @media only screen and (min-width: 1024px){
+                margin: 0;
+                padding: 0;
+            }
         }
         p:nth-of-type(2) {
             font-weight: 500;
@@ -45,9 +73,24 @@
             @media only screen and (min-width: 768px){
                 margin: 0 17rem;
             }
+            @media only screen and (min-width: 1024px){
+                margin: 0 0
+            }
         }
     }
     &__button {
         margin-bottom: 5.5rem;
+    }
+    &__description{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media only screen and (min-width: 1024px){
+            align-items: flex-start;
+            margin: 6.3rem 4.5rem 0 0;
+        }
+        @media only screen and (min-width: 1440px){
+            margin-right: 9.5rem;
+        }
     }
 }

@@ -9,7 +9,17 @@
         @media only screen and (min-width: 768px){
             width: 68.9rem;
             background-position: 0 0;
-            background-image: url('../../assets/home/tablet/image-speaker-zx7.jpg')
+            background-image: url('../../assets/home/tablet/image-speaker-zx7.jpg');
+        }
+        @media only screen and (min-width: 1024px){
+            width: 83.8rem;
+            height: 32rem;
+            background-image: url('../../assets/home/desktop/image-speaker-zx7.jpg');
+            background-position: -10rem 0;
+        }
+        @media only screen and (min-width: 1440px){
+            width: 111rem;
+            background-position: 0 0;
         }
     }
     &__content {

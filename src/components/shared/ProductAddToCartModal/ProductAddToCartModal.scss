@@ -4,6 +4,9 @@
         @media only screen and (min-width: 768px){
             margin: 16px 40px;
         }
+        @media only screen and (min-width: 1440px){
+            margin: 8rem 16.5rem 0 16.5rem;
+        }
        .new-product__container p {
             font-size: 14px;
             line-height: 19px;
@@ -25,6 +28,9 @@
                 margin-left: 6.9rem;
                 width: 50%;
             }
+            @media only screen and (min-width: 1440px){
+                margin-left: 12.5rem;
+            }
         }
     }
     &__image-container{
@@ -41,6 +47,10 @@
             height: 48rem;
             display: flex;
             align-items: center;
+        }
+        @media only screen and (min-width: 1440px){
+            width: 54rem;
+            height: 56rem;
         }
     }
     &__product-info{
@@ -79,6 +89,9 @@
         margin-top: 31px;
         display: flex;
         justify-content: space-between;
+        @media only screen and (min-width: 1024px){
+            justify-content: flex-start;
+        }
     }
     &-to-cart__button{
         button {
@@ -111,6 +124,9 @@
     width: 120px;
     display: flex;
     justify-content: center;
+    @media only screen and (min-width: 1024px){
+        margin-right: 1.6rem;
+    }
 
     span {
         font-family: 'Manrope';
@@ -141,8 +157,23 @@
 }
 
 .feature{
+    @media only screen and (min-width: 1440px){
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__header{
+        h2{
+            @media only screen and (min-width: 1440px){
+                margin-bottom: 3.2rem;
+            }
+        }
+    }
     &__container{
         margin-top: 88px;
+        @media only screen and (min-width: 1440px){
+            width: 60%;
+        }
         h1 {
             font-family: 'Manrope';
             font-weight: 700;
@@ -150,6 +181,10 @@
             line-height: 36px;
             letter-spacing: 1px;
             text-transform: uppercase;
+            @media only screen and (min-width: 1440px){
+                font-size: 3.2rem;
+                line-height: 3.6rem;
+            }
         }
         p{
             padding-top: 24px;
@@ -165,6 +200,9 @@
         margin-top: 88px;
         @media only screen and (min-width: 768px){
             display: flex;
+        }
+        @media only screen and (min-width: 1440px){
+            flex-direction: column;
         }
         h2{
             font-family: 'Manrope';

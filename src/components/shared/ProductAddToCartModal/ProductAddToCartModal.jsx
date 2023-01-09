@@ -91,7 +91,7 @@ const AddToCartButton = () => {
 const Feature = ({featureDescription, featuredItem}) => {
 
   return(
-    <>
+    <div className="feature">
       <div className="feature__container">
         <h1>Features</h1>
         <p>{featureDescription}</p>
@@ -106,7 +106,7 @@ const Feature = ({featureDescription, featuredItem}) => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   
   )
 }

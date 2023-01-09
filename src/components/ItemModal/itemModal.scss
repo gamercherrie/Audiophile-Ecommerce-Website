@@ -9,6 +9,10 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+        @media only screen and (min-width: 1440px){
+            width: 35rem;
+            height: 20.4rem;
+        }
 
         p {
             font-weight: 700;
@@ -18,7 +22,12 @@
             letter-spacing: 1.07143px;
             text-transform: uppercase;
             color: #000000;
-            margin: 0 0 1.7rem 0;
+            padding: 0 0 1.7rem 0;
+            @media only screen and (min-width: 1440px){
+                font-size: 1.8rem;
+                line-height: 2.5rem;
+                padding-bottom: 1.5rem;
+            }
         }
         a {
             font-weight: 700;
@@ -27,8 +36,11 @@
             letter-spacing: 1px;
             text-transform: uppercase;
             color: #5e5e5e;
-            margin-top: 1.7rem;
+            padding-top: 1.7rem;
             display: flex;
+            @media only screen and (min-width: 1440px){
+                padding-top: 0;
+            }
         }
         a img {
             padding-left: 1rem;
@@ -45,11 +57,22 @@
                 width: 22.3rem;
                 margin-right: 1rem;
             }
+            @media only screen and (min-width: 1024px){
+                width: 31rem;
+            }
+            @media only screen and (min-width: 1440px){
+                width: 35rem;
+                margin: 4rem 1rem 0 1rem;
+            }
         }
     }
     &__object-image {
         width: 14rem; 
         margin-top: -5rem;
+        @media only screen and (min-width: 1440px){
+            width: 19rem;
+            height: 17rem;
+        }
     }
 }
 
