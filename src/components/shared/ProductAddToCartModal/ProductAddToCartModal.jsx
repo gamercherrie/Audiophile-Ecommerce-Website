@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, createContext, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './ProductAddToCartModal.scss'
 import data from '../../../local-json/data.json'
 
+const CartContext = createContext();
 
 const ProductAddToCartModal = (props) => {
 
@@ -36,7 +37,9 @@ const ProductAddToCartModal = (props) => {
            </div>
            <div className="add__button-container">
             <QuantityControls />
-            <AddToCartButton />
+            <CartProvider>
+              <AddToCartButton name={selectedProduct.name} price={selectedProduct.price}/>
+            </CartProvider>
            </div>
          </div>
        </div>
@@ -74,14 +77,33 @@ const QuantityControls = () => {
   );
 };
 
-const AddToCartButton = () => {
-  const handleAddToCartClick = () => {
-    // Get the current value of the quantity state and add the desired number of items to the cart
-  };
+const CartProvider = ({children}) => {
+  const initialCart = JSON.parse(sessionStorage.getItem('cart')) || [];
+  const [cart, setCart] = useState(initialCart);
 
+  const addToCart = (item) => {
+    setCart([...cart, item]);
+    sessionStorage.setItem('cart', JSON.stringify(cart));
+  }
+
+  return(
+    <CartContext.Provider value={{ cart, addToCart }}>
+      {children}
+    </CartContext.Provider>
+  )
+}
+
+const AddToCartButton = ({name, price}) => {
+  const { cart, addToCart } = useContext(CartContext)
+
+  const handleAddToCartClick = (item) => {
+    addToCart(item)
+  }
+
+  console.log(cart);
   return (
     <div className="add-to-cart__button">
-      <button type="button" onClick={handleAddToCartClick}>
+      <button type="button" onClick={() => handleAddToCartClick({name, price, id: `${name}-${price}`})}>
         Add to Cart
       </button>
     </div>
