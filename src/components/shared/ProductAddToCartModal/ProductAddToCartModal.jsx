@@ -82,8 +82,11 @@ const CartProvider = ({children}) => {
   const [cart, setCart] = useState(initialCart);
 
   const addToCart = (item) => {
-    setCart([...cart, item]);
-    sessionStorage.setItem('cart', JSON.stringify(cart));
+    setCart(currentCart => {
+      const newCart = [...currentCart, item];
+      sessionStorage.setItem('cart', JSON.stringify(newCart));
+      return newCart;
+    })
   }
 
   return(
