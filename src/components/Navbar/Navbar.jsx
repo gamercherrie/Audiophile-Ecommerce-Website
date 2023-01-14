@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useContext, CartContext} from "react";
 import { Link } from "react-router-dom";
 import './navbar.scss';
 import { ItemModal } from '../index';
@@ -26,7 +26,10 @@ const Navbar = () => {
                    <Link to="/speakers">SPEAKERS</Link>
                    <Link to="/earphones">EARPHONES</Link>
                 </div>
-                <div className="navbar__cart"><img src={Cart} alt="Checkout Cart"/></div>
+                <div className="navbar__cart">
+                    <img src={Cart} alt="Checkout Cart"/>
+                    {/* <div className="navbar__count"><p>{cart.length}</p></div> */}
+                </div>
             </div>
             {navBarOpen &&  
                 <div className="navbar__modal display-mobile-only">

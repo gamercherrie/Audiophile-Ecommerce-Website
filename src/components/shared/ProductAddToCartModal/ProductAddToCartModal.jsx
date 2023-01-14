@@ -77,7 +77,7 @@ const QuantityControls = () => {
   );
 };
 
-const CartProvider = ({children}) => {
+ const CartProvider = ({children}) => {
   const initialCart = JSON.parse(sessionStorage.getItem('cart')) || [];
   const [cart, setCart] = useState(initialCart);
 
