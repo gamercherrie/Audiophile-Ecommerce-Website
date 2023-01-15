@@ -10,7 +10,7 @@ const YouMayAlsoLike = (props) => {
         <div className="option-product__container">
             <div className="option-product__image"><img src={FeaturedProduct} alt="Featured Product"/></div>
             <h1>{FeaturedProductTitle}</h1>
-            <ProductButton 
+            <ProductButton
               backgroundColor="#D87D4A" 
               customButtonClass="option-product__button"
               buttonLink={FeaturedLink}

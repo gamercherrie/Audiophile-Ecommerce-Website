@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, ProductAddToCartModal, YouMayAlsoLike, ItemModal, Aboutus, Footer} from '../../components'
+import { Navbar, ProductAddToCartModal, YouMayAlsoLike, ItemModal, Aboutus, Footer, ScrollTop} from '../../components'
 import './XX99MarkIIPage.scss'
 import 
   {
@@ -16,6 +16,7 @@ import
   }
     from '../../assets'
 const XX99MarkIIPage = () => {
+  ScrollTop();
   return (
     <React.Fragment>
         <Navbar />

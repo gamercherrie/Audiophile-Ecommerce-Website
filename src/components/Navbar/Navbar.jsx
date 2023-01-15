@@ -1,17 +1,19 @@
-import React, {useState, useContext, CartContext} from "react";
+import React, {useState, useContext} from "react";
 import { Link } from "react-router-dom";
 import './navbar.scss';
 import { ItemModal } from '../index';
 import { Logo, Cart, HamburgerMenu, CloseMenu, XX99MarkOneHeadphones, Speakers, Earphones } from "../../assets";
+import { CartContext } from '../shared/CartProvider/CartProvider';
 
 const Navbar = () => {
-
+    const { cart } = useContext(CartContext)
     const[navBarOpen, setNavbarOpen] = useState(false)
 
     const handleToggle = () => {
         setNavbarOpen(previousElement => !previousElement)
     }
     
+    const totalQuantity = cart.reduce((acc, item) => acc + item.quantity, 0);
 
     return (
         <div className="navbar">
@@ -28,7 +30,7 @@ const Navbar = () => {
                 </div>
                 <div className="navbar__cart">
                     <img src={Cart} alt="Checkout Cart"/>
-                    {/* <div className="navbar__count"><p>{cart.length}</p></div> */}
+                    <div className="navbar__count"><p>{totalQuantity}</p></div>
                 </div>
             </div>
             {navBarOpen &&  

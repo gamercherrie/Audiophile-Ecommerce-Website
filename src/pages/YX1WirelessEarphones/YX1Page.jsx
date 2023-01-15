@@ -1,6 +1,6 @@
 import React from 'react'
 import './YX1Page.scss'
-import { Navbar, ProductAddToCartModal, YouMayAlsoLike, ItemModal, Aboutus, Footer} from '../../components'
+import { Navbar, ProductAddToCartModal, YouMayAlsoLike, ItemModal, Aboutus, Footer, ScrollTop} from '../../components'
 import 
   {
     YX1WirelessEarphonesFilled,
@@ -17,6 +17,7 @@ import
     from '../../assets'
 
 const YX1Page = () => {
+  ScrollTop();
   return (
     <React.Fragment>
         <Navbar />

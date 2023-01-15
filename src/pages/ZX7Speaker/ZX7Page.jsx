@@ -1,6 +1,6 @@
 import React from 'react'
 import './ZX7Page.scss'
-import { Navbar, ProductAddToCartModal, YouMayAlsoLike, ItemModal, Aboutus, Footer} from '../../components'
+import { Navbar, ProductAddToCartModal, YouMayAlsoLike, ItemModal, Aboutus, Footer, ScrollTop} from '../../components'
 import 
   {
     ZX7SpeakersFilled,
@@ -17,6 +17,7 @@ import
     from '../../assets'
 
 const ZX7Page = () => {
+  ScrollTop();
   return (
     <React.Fragment>
         <Navbar />

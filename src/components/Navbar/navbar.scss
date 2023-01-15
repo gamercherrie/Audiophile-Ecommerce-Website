@@ -56,6 +56,16 @@
             z-index: 1;
         }
     }
+    &__count{
+        background-color: #D87D4A;
+        border-radius: 50%;
+        width: 15px;
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-weight: 700;
+        
+    }
    
 }
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, ProductModal, SectionHeader, ItemModal, Aboutus, Footer } from '../../components'
+import { Navbar, ProductModal, SectionHeader, ItemModal, Aboutus, Footer, ScrollTop } from '../../components'
 import 
     { 
       ZX9SpeakersFilled, 
@@ -11,6 +11,7 @@ import
       from '../../assets'
 
 const SpeakersPage = () => {
+  ScrollTop();
   return (
    <React.Fragment>
         <Navbar/>

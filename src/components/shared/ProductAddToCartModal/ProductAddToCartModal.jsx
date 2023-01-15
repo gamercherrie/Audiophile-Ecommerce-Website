@@ -2,8 +2,7 @@ import React, { useState, useEffect, createContext, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './ProductAddToCartModal.scss'
 import data from '../../../local-json/data.json'
-
-const CartContext = createContext();
+import { CartContext } from '../CartProvider/CartProvider'
 
 const ProductAddToCartModal = (props) => {
 
@@ -37,9 +36,7 @@ const ProductAddToCartModal = (props) => {
            </div>
            <div className="add__button-container">
             <QuantityControls />
-            <CartProvider>
-              <AddToCartButton name={selectedProduct.name} price={selectedProduct.price}/>
-            </CartProvider>
+            <AddToCartButton name={selectedProduct.name} price={selectedProduct.price}/>
            </div>
          </div>
        </div>
@@ -52,7 +49,7 @@ const ProductAddToCartModal = (props) => {
 }
 
 const QuantityControls = () => {
-  const [quantity, setQuantity] = useState(1);
+  const { quantity, setQuantity } = useContext(CartContext)
 
   const handleDecreaseQuantityClick = () => {
     if (quantity > 1) {
@@ -77,36 +74,18 @@ const QuantityControls = () => {
   );
 };
 
- const CartProvider = ({children}) => {
-  const initialCart = JSON.parse(sessionStorage.getItem('cart')) || [];
-  const [cart, setCart] = useState(initialCart);
-
-  const addToCart = (item) => {
-    setCart(currentCart => {
-      const newCart = [...currentCart, item];
-      sessionStorage.setItem('cart', JSON.stringify(newCart));
-      return newCart;
-    })
-  }
-
-  return(
-    <CartContext.Provider value={{ cart, addToCart }}>
-      {children}
-    </CartContext.Provider>
-  )
-}
-
 const AddToCartButton = ({name, price}) => {
-  const { cart, addToCart } = useContext(CartContext)
+  const { cart, addToCart, quantity, setQuantity } = useContext(CartContext)
 
   const handleAddToCartClick = (item) => {
-    addToCart(item)
+    addToCart(item);
+    setQuantity(1);
   }
 
   console.log(cart);
   return (
     <div className="add-to-cart__button">
-      <button type="button" onClick={() => handleAddToCartClick({name, price, id: `${name}-${price}`})}>
+      <button type="button" onClick={() => handleAddToCartClick({name, price, id: `${name}-${price}`, quantity})}>
         Add to Cart
       </button>
     </div>

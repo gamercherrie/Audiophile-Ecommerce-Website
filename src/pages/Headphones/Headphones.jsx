@@ -1,6 +1,6 @@
 import React from 'react'
 import './headphones.scss'
-import { Navbar, SectionHeader, ProductModal, ItemModal, Aboutus, Footer} from '../../components'
+import { Navbar, SectionHeader, ProductModal, ItemModal, Aboutus, Footer, ScrollTop} from '../../components'
 import 
   { 
     XX99MarkTwoHeadphones, 
@@ -13,6 +13,7 @@ import
     from '../../assets'
 
 const Headphones = () => {
+  ScrollTop();
   return (
     <React.Fragment>
         <Navbar />

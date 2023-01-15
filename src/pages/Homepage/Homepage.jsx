@@ -1,10 +1,12 @@
 import React from 'react';
 import './homepage.scss';
-import { Navbar, Header, ItemModal, ZX9SpeakerModal, ZX7SpeakerModal, Aboutus, Footer } from '../../components';
+import { Navbar, Header, ItemModal, ZX9SpeakerModal, ZX7SpeakerModal, Aboutus, Footer, ScrollTop } from '../../components';
 import { XX99MarkOneHeadphones, Speakers, Earphones } from '../../assets';
 import YX1EarphonesModal from '../../components/YX1EarphonesModal/YX1EarphonesModal';
 
 const Homepage = () => {
+    ScrollTop();
+    
     return (
         <React.Fragment>
             <Navbar/>
