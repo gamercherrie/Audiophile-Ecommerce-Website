@@ -30,7 +30,7 @@ const Headphones = () => {
           productName="XX99 MARK I HEADPHONES"
           productDescription="As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go."
           productLink="/headphones/XX99MarkIHeadphones"
-          style={{flexDirection: 'row-reverse'}}
+          className="reversed-styling"
         />
         <ProductModal 
           productImage={XX59Headphones}

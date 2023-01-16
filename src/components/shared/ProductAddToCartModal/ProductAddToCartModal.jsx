@@ -36,7 +36,7 @@ const ProductAddToCartModal = (props) => {
            </div>
            <div className="add__button-container">
             <QuantityControls />
-            <AddToCartButton name={selectedProduct.name} price={selectedProduct.price}/>
+            <AddToCartButton name={selectedProduct.name} price={selectedProduct.price} picture={selectedProduct.image.desktop}/>
            </div>
          </div>
        </div>
@@ -74,7 +74,7 @@ const QuantityControls = () => {
   );
 };
 
-const AddToCartButton = ({name, price}) => {
+const AddToCartButton = ({name, price, picture}) => {
   const { cart, addToCart, quantity, setQuantity } = useContext(CartContext)
 
   const handleAddToCartClick = (item) => {
@@ -82,10 +82,9 @@ const AddToCartButton = ({name, price}) => {
     setQuantity(1);
   }
 
-  console.log(cart);
   return (
     <div className="add-to-cart__button">
-      <button type="button" onClick={() => handleAddToCartClick({name, price, id: `${name}-${price}`, quantity})}>
+      <button type="button" onClick={() => handleAddToCartClick({name, price, id: `${name}-${price}`, quantity, picture})}>
         Add to Cart
       </button>
     </div>

@@ -1,19 +1,24 @@
 import React, {useState, useContext} from "react";
 import { Link } from "react-router-dom";
 import './navbar.scss';
-import { ItemModal } from '../index';
+import { ItemModal, CartComponent } from '../index';
 import { Logo, Cart, HamburgerMenu, CloseMenu, XX99MarkOneHeadphones, Speakers, Earphones } from "../../assets";
 import { CartContext } from '../shared/CartProvider/CartProvider';
 
 const Navbar = () => {
     const { cart } = useContext(CartContext)
     const[navBarOpen, setNavbarOpen] = useState(false)
+    const[ showModal, setShowModal] = useState(false)
 
     const handleToggle = () => {
         setNavbarOpen(previousElement => !previousElement)
     }
     
     const totalQuantity = cart.reduce((acc, item) => acc + item.quantity, 0);
+
+    const cartModal = () => {
+       setShowModal((prevState) => !prevState)
+    }
 
     return (
         <div className="navbar">
@@ -29,9 +34,10 @@ const Navbar = () => {
                    <Link to="/earphones">EARPHONES</Link>
                 </div>
                 <div className="navbar__cart">
-                    <img src={Cart} alt="Checkout Cart"/>
+                    <img src={Cart} alt="Checkout Cart" onClick={cartModal}/>
                     <div className="navbar__count"><p>{totalQuantity}</p></div>
                 </div>
+                {showModal && <CartComponent/> }
             </div>
             {navBarOpen &&  
                 <div className="navbar__modal display-mobile-only">

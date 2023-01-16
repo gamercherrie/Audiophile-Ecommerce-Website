@@ -6,7 +6,7 @@ import './ProductModal.scss'
 const ProductModal = (props) => {
   const{ productImage, productName, productDescription, productLink, newProduct, style } = props;
   return (
-    <div className="product-modal__container" style={style}>
+    <div className={"product-modal__container " + props.className} style={style}>
         <Box className="product-modal__image"><img src={productImage} alt="Product" /></Box>
         <div className="product-modal__description">
           <p>{newProduct}</p>

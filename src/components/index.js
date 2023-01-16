@@ -12,3 +12,4 @@ export { default as ProductAddToCartModal } from './shared/ProductAddToCartModal
 export { default as YouMayAlsoLike } from './shared/YouMayAlsoLike/YouMayAlsoLike'
 export { default as CartProvider } from './shared/CartProvider/CartProvider'
 export { default as ScrollTop } from './shared/ScrollTop/ScrollTop'
+export { default as CartComponent } from './shared/CartComponent/CartComponent'
