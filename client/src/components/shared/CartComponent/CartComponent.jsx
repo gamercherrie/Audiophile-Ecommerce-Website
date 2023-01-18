@@ -1,11 +1,21 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
+import axios from 'axios';
 import { CartContext } from '../CartProvider/CartProvider';
 import './CartComponent.scss'
 
 const CartComponent = () => {
   const{ cart } = useContext(CartContext)
+  const[images, setImages] = useState([]);
 
-  console.log(cart)
+  useEffect(() => {
+    const getImages = async() => {
+        const response = await axios.get('/products/get');
+        console.log(response.data);
+    };
+    getImages();
+  }, [])
+
+  console.log(images);
 
   return (
     <div className="cart-component">
