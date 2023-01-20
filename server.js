@@ -22,6 +22,7 @@ const ItemSchema = mongoose.Schema({
     name: String,
     price: Number,
     slug: String,
+    cartName: String,
     image: {
         desktop: String,
     },
@@ -30,7 +31,7 @@ const ItemSchema = mongoose.Schema({
 const Item = mongoose.model("items", ItemSchema)
 
 app.get('/products/get', (req, res) => {
-    Item.find().select('image.desktop name price slug')
+    Item.find().select('image.desktop name price slug cartName')
     .then(items => res.json(items))
     .catch(err => res.status(500).send(err));
 })

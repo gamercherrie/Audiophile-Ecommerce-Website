@@ -1,8 +1,9 @@
 import React, { useContext, useState, useEffect } from 'react'
 import axios from 'axios';
-import { CartContext } from '../CartProvider/CartProvider';
+import { CartContext} from '../CartProvider/CartProvider';
 import './CartComponent.scss'
-import Image from '../../../assets/product-xx59-headphones/desktop/image-product.jpg'
+import { QuantityControls } from '../../index'
+
 const CartComponent = () => {
   const{ cart } = useContext(CartContext)
   const[items, setItems] = useState([]);
@@ -18,13 +19,17 @@ const CartComponent = () => {
 
   useEffect(() => {
     if (items && items.length > 0 && cart && cart.length > 0) {
-      const cartSet = new Set(cart.map(item => item.name));
-      setFilteredItems(items.filter(item => cartSet.has(item.name)));      
+      const cartMap = new Map(cart.map(item => [item.name, item.quantity]));
+      setFilteredItems(items.filter(item => cartMap.has(item.name)).map(item => {
+        return {
+          ...item,
+          quantity: cartMap.get(item.name)
+        }
+      }));
     }
   }, [items, cart]);
 
-
-
+  console.log(cart)
 
   if(items.length > 0) return (
     <div className="cart-component">
@@ -35,11 +40,18 @@ const CartComponent = () => {
               <a href="#">Remove All</a>
             </div>
             {filteredItems.length > 0 ? filteredItems.map((item, index) => (
-                <div key={index}>
-                  <div><img src={`../../../assets/product-${item.slug}/desktop/image-product.jpg`} alt="item"/></div>
-                  <div>
-                    <p>{item.name}</p>
-                    <p>{item.price}</p>
+                <div key={index} className="filtered-item">
+                  <div className="filtered-item__item-section">
+                    <div className="filtered-item__image">
+                      <img src={`../../../assets/product-${item.slug}/desktop/image-product.jpg`} alt="item"/>
+                    </div>
+                    <div className="filtered-item__label">
+                      <p>{item.cartName}</p>
+                      <p>${item.price.toLocaleString()}</p>
+                    </div>
+                  </div>
+                  <div className="filtered-item__quantity-button">
+                    <QuantityControls itemId={`${item.name}-${item.price}`} initialQuantity={item.quantity}/>
                   </div>
                 </div>
               )) : <p>No items found.</p>}

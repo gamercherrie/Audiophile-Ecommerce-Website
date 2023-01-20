@@ -13,3 +13,4 @@ export { default as YouMayAlsoLike } from './shared/YouMayAlsoLike/YouMayAlsoLik
 export { default as CartProvider } from './shared/CartProvider/CartProvider'
 export { default as ScrollTop } from './shared/ScrollTop/ScrollTop'
 export { default as CartComponent } from './shared/CartComponent/CartComponent'
+export { default as QuantityControls } from './shared/QuantityControls/QuantityControls'

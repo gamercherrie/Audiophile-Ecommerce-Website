@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext, useContext } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './ProductAddToCartModal.scss'
 import data from '../../../local-json/data.json'
@@ -35,8 +35,12 @@ const ProductAddToCartModal = (props) => {
              <p>${productPrice.toLocaleString()}</p>
            </div>
            <div className="add__button-container">
-            <QuantityControls />
-            <AddToCartButton name={selectedProduct.name} price={selectedProduct.price} picture={selectedProduct.image.desktop}/>
+            <QuantityButton />
+            <AddToCartButton 
+              name={selectedProduct.name} 
+              price={selectedProduct.price} 
+              picture={selectedProduct.image.desktop}
+            />
            </div>
          </div>
        </div>
@@ -48,7 +52,7 @@ const ProductAddToCartModal = (props) => {
   )
 }
 
-const QuantityControls = () => {
+const QuantityButton = () => {
   const { quantity, setQuantity } = useContext(CartContext)
 
   const handleDecreaseQuantityClick = () => {
@@ -74,13 +78,19 @@ const QuantityControls = () => {
   );
 };
 
+
 const AddToCartButton = ({name, price, picture}) => {
-  const { cart, addToCart, quantity, setQuantity } = useContext(CartContext)
+  const { cart, addToCart, quantity, setQuantity, updateCart } = useContext(CartContext)
 
   const handleAddToCartClick = (item) => {
-    addToCart(item);
+    const existingItem = cart.find(i => i.name === item.name);
+    if (existingItem) {
+      updateCart(item.id, existingItem.quantity + quantity);
+    } else {
+      addToCart(item);
+    }
     setQuantity(1);
-  }
+  }  
 
   return (
     <div className="add-to-cart__button">

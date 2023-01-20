@@ -14,9 +14,22 @@ const CartProvider = ({children}) => {
         return newCart;
       })
     }
+
+    const updateCart = (id, quantity) => {
+      setCart(currentCart => {
+        const updatedCart = currentCart.map(item => {
+          if(item.id == id) {
+            return {...item, quantity}
+          }
+          return item
+        });
+        sessionStorage.setItem('cart', JSON.stringify(updatedCart));
+        return updatedCart;
+      })
+    }
   
     return(
-      <CartContext.Provider value={{ cart, addToCart, quantity, setQuantity }}>
+      <CartContext.Provider value={{ cart, addToCart, quantity, setQuantity, updateCart}}>
         {children}
       </CartContext.Provider>
     )
