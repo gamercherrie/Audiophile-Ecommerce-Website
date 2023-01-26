@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter, Route, Routes, useLocation} from 'react-router-dom';
 import { Homepage, Headphones, SpeakersPage, EarphonesPage, XX99MarkIIPage, XX99MarkIPage, XX59Page, ZX9Page, ZX7Page,
-YX1Page } from './pages';
+YX1Page, CheckoutPage } from './pages';
 import './App.scss';
 import { CartProvider } from './components';
 
@@ -19,6 +19,7 @@ const App = () => (
           <Route path="/speakers/ZX9Speakers" element={<ZX9Page />} />
           <Route path="/speakers/ZX7Speakers" element={<ZX7Page/>} />
           <Route path="/earphones/YX1WirelessEarphones" element={<YX1Page/>} />
+          <Route path="/checkout" element={<CheckoutPage/>} />
       </Routes>
     </BrowserRouter>
   </CartProvider>

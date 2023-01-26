@@ -1,0 +1,22 @@
+.checkout{
+    background-color: #F2F2F2;
+    button{
+        margin: 1.6rem 0 2.4rem 2.4rem;
+    }
+    &__container{
+        background-color: #FFF;
+        border-radius: 8px;
+        margin: 0 2.4rem;
+    }
+    &__form{
+        padding: 2.4rem;
+        h1{
+            font-family: 'Manrope';
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 38px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+    }
+}
