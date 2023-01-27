@@ -1,33 +1,43 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './ProductAddToCartModal.scss'
-import data from '../../../local-json/data.json'
 import { CartContext } from '../CartProvider/CartProvider'
+import axios from 'axios'
 
 const ProductAddToCartModal = (props) => {
 
   const navigate = useNavigate()
 
   const { ImageofProduct, productTitle} = props
-  const [newProduct, setNewProduct] = useState(false);
+  const [data, setData] = useState([])
+  const [filteredData, setFilteredData] = useState([])
+  const [selectedProduct, setSelectedProduct] = useState(null)
+  const [productPrice, setProductPrice] = useState(0)
 
-  const selectedProduct = data.filter(data => data.name.toLowerCase() === productTitle.toLowerCase())[0]
-  const productPrice = selectedProduct.price
+  useEffect(() => {
+    axios.get('http://localhost:3001/products/get')
+    .then(response => {
+      setData(response.data);
+      const filtered = response.data.filter(data => data.name.toLowerCase() === productTitle.toLowerCase());
+      setFilteredData(filtered);
+      console.log(filtered[0]);
+      const selectedProduct = filtered[0];
+      setSelectedProduct(selectedProduct);
+      setProductPrice(selectedProduct.price);
+    })
+    .catch(error => {
+      console.log(error);
+    });
+  }, [productTitle]);
 
-  useEffect (() => {
-    if (selectedProduct.new === true) {
-      setNewProduct(true);
-    }
-  }, [selectedProduct.new]);
-
-  return (
+  if(filteredData.length > 0) return (
     <div className="add__container">
        <button className="add__button" onClick={() => navigate(-1)}>Go Back</button>
        <div className="add__content">
          <div className="add__image-container"><img src={ImageofProduct} alt={selectedProduct.name}/></div>
          <div className="add__content-section2">
            <div className="new-product__container">
-            {newProduct === true ? <p>NEW PRODUCT</p> : null }
+            {selectedProduct.new === true ? <p>NEW PRODUCT</p> : null }
             </div>
            <div className="add__product-info">
              <h1>{productTitle}</h1>
@@ -40,6 +50,8 @@ const ProductAddToCartModal = (props) => {
               name={selectedProduct.name} 
               price={selectedProduct.price} 
               picture={selectedProduct.image.desktop}
+              cartName={selectedProduct.cartName}
+              slug={selectedProduct.slug}
             />
            </div>
          </div>
@@ -79,7 +91,7 @@ const QuantityButton = () => {
 };
 
 
-const AddToCartButton = ({name, price, picture}) => {
+const AddToCartButton = ({name, price, picture, cartName, slug}) => {
   const { cart, addToCart, quantity, setQuantity, updateCart } = useContext(CartContext)
 
   const handleAddToCartClick = (item) => {
@@ -94,7 +106,7 @@ const AddToCartButton = ({name, price, picture}) => {
 
   return (
     <div className="add-to-cart__button">
-      <button type="button" onClick={() => handleAddToCartClick({name, price, id: `${name}-${price}`, quantity, picture})}>
+      <button type="button" onClick={() => handleAddToCartClick({name, price, id: `${name}-${price}`, quantity, picture, cartName, slug})}>
         Add to Cart
       </button>
     </div>

@@ -9,8 +9,6 @@ const CheckoutPage = () => {
   const{cart} = useContext(CartContext);
 
   const navigate = useNavigate()
-
-  console.log(cart)
   
   return (
     <React.Fragment>
@@ -26,6 +24,19 @@ const CheckoutPage = () => {
         <div className="checkout__container">
           <div className="checkout__form">
             <h2>Summary</h2>
+            {cart.length > 0 ? cart.map((item, index) => (
+                  <div key={index} className="filtered-item">
+                    <div className="filtered-item__item-section">
+                      <div className="filtered-item__image">
+                        <img src={`../../../assets/product-${item.slug}/desktop/image-product.jpg`} alt="item"/>
+                      </div>
+                      <div className="filtered-item__label">
+                        <p>{item.cartName}</p>
+                        <p>${item.price.toLocaleString()}</p>
+                      </div>
+                    </div>
+                  </div>
+              )) : <p>No items found.</p>}
           </div>
         </div>
       </div>

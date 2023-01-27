@@ -19,23 +19,29 @@ async function connect(){
 connect();
 
 const ItemSchema = mongoose.Schema({
+    id: Number,
+    slug: String,
     name: String,
     price: Number,
-    slug: String,
     cartName: String,
     new: Boolean,
     image: {
         desktop: String,
     },
+    includes: [{
+        quantity: Number,
+        item: String
+    }]
 })
 
 const Item = mongoose.model("items", ItemSchema)
 
 app.get('/products/get', (req, res) => {
-    Item.find().select('image.desktop name price slug cartName new')
+    Item.find()
     .then(items => res.json(items))
     .catch(err => res.status(500).send(err));
 })
+
 
 app.listen(3001, () => {
     console.log("server started on port 3001")
