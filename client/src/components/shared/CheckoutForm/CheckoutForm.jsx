@@ -118,7 +118,8 @@ const CheckoutForm = () => {
             </label>
             <p>Payment Details</p>
             <p className="payment-method">Payment Method</p>
-            <div className="payment-method__container">
+            <div className="payment-method__container" onClick={()=>handleChange()}>
+              <label onClick={()=>handleChange()}>
                 <input
                   type="radio"
                   name="paymentMethod"
@@ -126,9 +127,11 @@ const CheckoutForm = () => {
                   onChange={handleChange}
                   checked={formData.paymentMethod === "e-Money"}
                 />
-                <label>e-Money</label>
+                e-Money
+              </label>
             </div>
             <div className="payment-method__container">
+              <label onClick={()=>handleChange()}>
                 <input
                   type="radio"
                   name="paymentMethod"
@@ -136,7 +139,8 @@ const CheckoutForm = () => {
                   checked={formData.paymentMethod === "cashOnDelivery"}
                   onChange={handleChange}
                 />
-                <label>Cash On Delivery</label>
+                Cash On Delivery
+              </label>
             </div>
             {formData.paymentMethod === "e-Money" && (
               <>

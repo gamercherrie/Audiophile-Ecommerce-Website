@@ -106,6 +106,8 @@
         }
     }
     &__checkout{
+        display: flex;
+        justify-content: center;
         button{
             background: #D87D4A;
             width: 27.1rem;
