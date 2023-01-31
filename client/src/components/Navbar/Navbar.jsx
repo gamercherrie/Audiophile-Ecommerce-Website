@@ -6,7 +6,7 @@ import { Logo, Cart, HamburgerMenu, CloseMenu, XX99MarkOneHeadphones, Speakers, 
 import { CartContext } from '../shared/CartProvider/CartProvider';
 
 const Navbar = () => {
-    const { cart } = useContext(CartContext)
+    const { cart = [] } = useContext(CartContext) || {};
     const[navBarOpen, setNavbarOpen] = useState(false)
     const[ showModal, setShowModal] = useState(false)
 

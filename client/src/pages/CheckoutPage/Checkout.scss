@@ -1,12 +1,43 @@
 .checkout{
     background-color: #F2F2F2;
-    button{
+    padding-bottom: 14.1rem;
+    .add__button{
         margin: 1.6rem 0 0 2.4rem;
+        @media only screen and (min-width: 1024px){
+           margin-left: 7.4rem;
+        }
+        @media only screen and (min-width: 1240px){
+            margin-left: 10.4rem;
+         }
+         @media only screen and (min-width: 1440px){
+            margin-left: 12.4rem;
+         }
+    }
+    &__section{
+        @media only screen and (min-width: 1024px){
+            display: flex;
+            justify-content: center;
+        }
     }
     &__container{
         background-color: #FFF;
         border-radius: 8px;
         margin: 2.4rem 2.4rem 0 2.4rem;
+        &:nth-of-type(1){
+            @media only screen and (min-width: 1024px){
+                width: 55%;
+            }
+        }
+        &:nth-of-type(2){
+            @media only screen and (min-width: 1024px){
+                width: 28%;
+                height: fit-content; 
+            }
+            @media only screen and (min-width: 1240px){
+                width: 25%;
+                height: fit-content; 
+            }
+        }
     }
     &__form{
         padding: 2.4rem;
@@ -31,6 +62,15 @@
         .filtered-item{
             &__image{
                 width: 30%;
+                @media only screen and (min-width: 768px){
+                    width: 12%;
+                }
+                @media only screen and (min-width: 1024px){
+                    width: 45%;
+                }
+                @media only screen and (min-width: 1240px){
+                    width: 35%;
+                }
                 img{
                     width: 6.4rem;
                     height: 6.4rem;
@@ -46,6 +86,9 @@
                 flex-direction: column;
                 justify-content: center;
                 width: 60%;
+                @media only screen and (min-width: 768px){
+                    width: 78%;
+                }
                 p{
                     font-family: 'Manrope';
                     font-style: normal;
@@ -62,6 +105,9 @@
                 display: flex;
                 align-items: center;
                 width: 10%;
+                @media only screen and (min-width: 768px){
+                    justify-content: flex-end;
+                }
                 p{
                     font-family: 'Manrope';
                     font-style: normal;
@@ -135,7 +181,7 @@
         &__modal{
             background: #FFFFFF;
             border-radius: 8px;
-            margin: 0 2.4rem;
+            margin: 22.4rem 2.4rem 0 2.4rem;
             padding: 3.2rem;
             h1 {
                 font-family: 'Manrope';
@@ -208,6 +254,56 @@
             p{
                 font-weight: 700;
                 font-size: 12px;
+                cursor: pointer;
+            }
+            p:hover{
+                text-decoration: underline;
+            }
+        }
+        &__less{
+            text-align: center;
+            cursor: pointer;
+        }
+        &__less:hover{
+            text-decoration: underline;
+        }
+        &__grandTotal{
+            &-content{
+                padding: 1.5rem 2.4rem;
+            }
+            &-container{
+                background: #000000;
+                border-radius: 0px 0px 8px 8px;
+                p {
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 25px;
+                    color: #FFFFFF;
+                }
+                p:nth-of-type(1){
+                    opacity: 0.5;
+                    font-size: 1.5rem;
+                    text-transform: uppercase;
+                    padding-bottom: 0.8rem;
+                }
+                p:nth-of-type(2){
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                }
+            }
+        } 
+        &__button-home{
+            button{
+                background: #D87D4A;
+                color: white;
+                text-transform: uppercase;
+                font-family: 'Manrope';
+                font-weight: 700;
+                font-size: 13px;
+                line-height: 18px;
+                padding: 1.5rem 8.3rem;
+                margin: 1.6rem 0;
             }
         }
     }

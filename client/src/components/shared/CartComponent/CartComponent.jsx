@@ -6,7 +6,7 @@ import './CartComponent.scss'
 import { QuantityControls } from '../../index'
 
 const CartComponent = () => {
-  const{ cart } = useContext(CartContext)
+  const{ cart, setCart } = useContext(CartContext)
   const[items, setItems] = useState([]);
   const[filteredItems, setFilteredItems] = useState([]);
   const [isCheckoutButtonClicked, setIsCheckoutButtonClicked] = useState(false);
@@ -37,7 +37,12 @@ const CartComponent = () => {
 
   const handleCheckoutButtonClick = () => {
     setIsCheckoutButtonClicked(true);
-  }  
+  }
+  
+  const handleRemoveAll = () => {
+    setCart([]);
+    window.location.reload();
+  }
 
   if(items.length > 0) return (
     <div className="cart-component__bg">
@@ -46,7 +51,7 @@ const CartComponent = () => {
           <div className="cart-component__content">
             <div className="cart-component__header">
                 <h1>Cart (<span>{cart.length}</span>)</h1>
-                <a href="#">Remove All</a>
+                <button onClick={() => handleRemoveAll()}>Remove All</button>
             </div>
             {filteredItems.length > 0 ? filteredItems.map((item, index) => (
                   <div key={index} className="filtered-item">
