@@ -1,32 +1,22 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import './CheckoutForm.scss'
 
-const CheckoutForm = () => {
+const CheckoutForm = (props) => {
+  const {formData, setFormData,handleSubmit, errorMessage, setErrorMessage} = props
   const [countries, setCountries] = useState([]);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phoneNumber: '',
-    address: '',
-    zipCode: '',
-    city: '',
-    country: '',
-    paymentMethod: '',
-    eMoneyNumber: '',
-    eMoneyPin: ''
-  });
+
 
   const handleChange = event => {
     setFormData({
       ...formData,
       [event.target.name]: event.target.value
     })
+    setErrorMessage({
+      ...errorMessage,
+      [event.target.name]: ""
+    })
   }
 
-  const handleSubmit = event => {
-    event.preventDefault();
-    // submit form data to server or process payment
-  };
 
   const getCountries = async() => {
     const response = await fetch('https://restcountries.com/v3.1/all');
@@ -51,8 +41,10 @@ const CheckoutForm = () => {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Alexei Ward"
+                  required
                 />
             </label>
+            {errorMessage && errorMessage.name && <div className="error-message">{errorMessage.name}</div>}
             <label>
               Email Address
               <input 
@@ -61,19 +53,24 @@ const CheckoutForm = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="alexei@email.com"
+                required
               />
             </label>
+            {errorMessage && errorMessage.email && <div className="error-message">{errorMessage.email}</div>}
             <label>
                 Phone Number
                 <input 
                   type="tel"
-                  name="phone"
+                  name="phoneNumber"
                   value={formData.phoneNumber}
                   onChange={handleChange}
                   pattern="^(?:\+\d{1,2})?\d{3}[- ]?\d{3}[- ]?\d{4}$" //regex for allowing +1, +44 xxx-xxx-xxxx
                   placeholder="+1 202-555-0136"
+                  maxLength="12"
+                  required
                 />
             </label>
+            {errorMessage && errorMessage.phoneNumber && <div className="error-message">{errorMessage.phoneNumber}</div>}
             <p>Shipping Info</p>
             <label>
               Your Address
@@ -83,18 +80,22 @@ const CheckoutForm = () => {
                 value={formData.address}
                 onChange={handleChange}
                 placeholder="1137 Williams Avenue"
+                required
               />
             </label>
+            {errorMessage && errorMessage.address && <div className="error-message">{errorMessage.address}</div>}
             <label>
               ZIP Code
               <input 
-                type="text"
-                name="zipcode"
+                type="number"
+                name="zipCode"
                 value={formData.zipCode}
                 onChange={handleChange}
                 placeholder="10001"
+                required
               />
             </label>
+            {errorMessage && errorMessage.zipCode && <div className="error-message">{errorMessage.zipCode}</div>}
             <label>
               City
               <input 
@@ -103,11 +104,13 @@ const CheckoutForm = () => {
                 value={formData.city}
                 onChange={handleChange}
                 placeholder="New York"
+                required
               />
             </label>
+            {errorMessage && errorMessage.city && <div className="error-message">{errorMessage.city}</div>}
             <label>
               Country
-              <select name="country" value={formData.country} onChange={handleChange}>
+              <select name="country" value={formData.country} onChange={handleChange} required>
                 <option value="">Select a country</option>
                 {sortedCountries.map((country) => (
                   <option key={country.alpha2Code} value={country.alpha2Code}>
@@ -116,54 +119,62 @@ const CheckoutForm = () => {
                 ))}
               </select>
             </label>
+            {errorMessage && errorMessage.country && <div className="error-message">{errorMessage.country}</div>}
             <p>Payment Details</p>
             <p className="payment-method">Payment Method</p>
-            <div className="payment-method__container" onClick={()=>handleChange()}>
-              <label onClick={()=>handleChange()}>
+            <div className="payment-method__container">
+              <label>
                 <input
                   type="radio"
                   name="paymentMethod"
                   value="e-Money"
                   onChange={handleChange}
                   checked={formData.paymentMethod === "e-Money"}
+                  required
                 />
                 e-Money
               </label>
             </div>
             <div className="payment-method__container">
-              <label onClick={()=>handleChange()}>
+              <label>
                 <input
                   type="radio"
                   name="paymentMethod"
                   value="cashOnDelivery"
                   checked={formData.paymentMethod === "cashOnDelivery"}
                   onChange={handleChange}
+                  required
                 />
                 Cash On Delivery
               </label>
             </div>
+            {errorMessage && errorMessage.paymentMethod && <div className="error-message">{errorMessage.paymentMethod}</div>}
             {formData.paymentMethod === "e-Money" && (
               <>
                 <label>
                   e-Money Number
                   <input 
-                    type="text"
+                    type="number"
                     name="eMoneyNumber"
                     value={formData.eMoneyNumber}
                     onChange={handleChange}
                     placeholder="238521993"
+                    required
                   />
                 </label>
+                {errorMessage && errorMessage.eMoneyNumber && <div className="error-message">{errorMessage.eMoneyNumber}</div>}
                 <label>
                   e-Money Pin
                   <input 
-                    type="text"
+                    type="number"
                     name="eMoneyPin"
                     value={formData.eMoneyPin}
                     onChange={handleChange}
                     placeholder="6891"
+                    required
                   />
                 </label>
+                {errorMessage && errorMessage.eMoneyPin && <div className="error-message">{errorMessage.eMoneyPin}</div>}
               </>
             )}
 

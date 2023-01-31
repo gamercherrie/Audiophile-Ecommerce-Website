@@ -28,5 +28,187 @@
             text-transform: uppercase;
             color: #000000;
         }
+        .filtered-item{
+            &__image{
+                width: 30%;
+                img{
+                    width: 6.4rem;
+                    height: 6.4rem;
+                    border-radius: 8px;
+                }
+            }
+            &__item-section{
+                margin: 2.4rem 0;
+                display: flex;
+            }
+            &__label{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 60%;
+                p{
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 15px;
+                    line-height: 25px;
+                }
+                p:nth-of-type(2){
+                    font-size: 14px;
+                    opacity: 0.5
+                }
+            }
+            &__quantity{
+                display: flex;
+                align-items: center;
+                width: 10%;
+                p{
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 15px;
+                    line-height: 25px;
+                    text-align: right;
+                    color: #000000;
+                    mix-blend-mode: normal;
+                    opacity: 0.5;
+                }
+            }    
+        }
+    }
+    &__additional-fees{
+        p{
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 25px;
+            text-transform: uppercase;
+        }
+    }
+    &__fee{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0.8rem;
+        p:nth-of-type(1){
+            opacity: 0.5
+        }
+        p:nth-of-type(2){
+            font-weight: 700;
+            font-size: 18px;
+        }
+    }
+    &__grand-total{
+        padding-top: 2.4rem;
+        p:nth-of-type(2){
+            color: #D87D4A;
+        }
+    }
+    &__button{
+        display: flex;
+        justify-content: center;
+        margin-top: 3.2rem;
+        button{
+            background: #D87D4A;
+            width: 100%;
+            padding: 1.5rem 0;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 18px;
+            text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            margin: 0;
+        }
+    }
+    &-success{
+        &__container{
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        &__modal{
+            background: #FFFFFF;
+            border-radius: 8px;
+            margin: 0 2.4rem;
+            padding: 3.2rem;
+            h1 {
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 28px;
+                letter-spacing: 0.857143px;
+                text-transform: uppercase;
+                color: #000000;
+                padding: 2.3rem 0 1.6rem 0;
+
+            }
+            p{
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 25px;
+            }
+            p:nth-of-type(1){
+                opacity: 0.5;
+                padding-bottom: 2.4rem;
+            }
+        }
+        &__icon{
+            font-size: 6.4rem;
+            color: #D87D4A;
+        }
+        &__image{
+            width: 30%;
+            img{
+                border-radius: 8px;
+                width: 5rem;
+            }
+        }
+        &__items{
+            display: flex;
+            padding: 2.4rem 2.4rem 0 2.4rem;
+            &-modal{
+                background: #F1F1F1;
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+            }
+            &-desc{
+                width: 55%;
+                p:nth-of-type(1){
+                    padding: 0 !important;
+                    opacity: 1 !important
+                }
+                p:nth-of-type(2){
+                    opacity: 0.5;
+                }
+            }
+            &-quantity{
+                p{
+                    font-weight: 700;
+                }
+            }
+        }
+        &__bar{
+            height: 0.1rem;
+            background: #000000;
+            opacity: 0.2;
+            margin: 1.2rem 2.4rem;
+        }
+        &__other-items{
+            display: flex;
+            justify-content: center;
+            p{
+                font-weight: 700;
+                font-size: 12px;
+            }
+        }
     }
 }
