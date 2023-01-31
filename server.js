@@ -10,7 +10,7 @@ app.use(express.json())
 app.use(cors());
 
 
-
+const port = process.env.PORT || 3001
 const uri = "mongodb+srv://charisse_audiophile:uA0TNyPdtpyP57IY@cluster0.4hfu2qw.mongodb.net/?retryWrites=true&w=majority";
 
 async function connect(){
@@ -83,6 +83,6 @@ app.post('/submit/checkout', (req, res) => {
 })
 
 
-app.listen(3001, () => {
+app.listen(port, () => {
     console.log("server started on port 3001")
 });
