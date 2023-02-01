@@ -17,6 +17,7 @@ const ProductAddToCartModal = (props) => {
   useEffect(() => {
     axios.get('/products/get')
     .then(response => {
+      console.log(response.data)
       setData(response.data);
       const filtered = response.data.filter(data => data.name.toLowerCase() === productTitle.toLowerCase());
       setFilteredData(filtered);

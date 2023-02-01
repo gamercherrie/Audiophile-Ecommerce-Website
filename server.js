@@ -1,6 +1,5 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
 const cors = require('cors');
 const app = express();
 const bodyParser = require('body-parser');
@@ -12,14 +11,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json())
 app.use(cors());
 
-app.use(express.static(path.join(__dirname, 'client/build')));
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build/index.html'));
-});
-
 const port = process.env.PORT || 3001;
-const uri = process.env.URI;
+const uri = "mongodb+srv://charisse_audiophile:RbAt3rAMmMEdfYEm@cluster0.4hfu2qw.mongodb.net/?retryWrites=true&w=majority";
 
 async function connect(){
     try{
@@ -73,9 +66,16 @@ const Order = mongoose.model("Orders", orderSchema)
 
 app.get('/products/get', (req, res) => {
     Item.find()
-    .then(items => res.json(items))
-    .catch(err => res.status(500).send(err));
-})
+      .then(items => {
+        console.log("AAAAAAAA",items);
+        res.json(items);
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).send(err);
+      });
+  });
+  
 
 app.post('/submit/checkout', (req, res) => {
     console.log('Received form data: ', req.body)
@@ -90,6 +90,11 @@ app.post('/submit/checkout', (req, res) => {
     })
 })
 
+app.use(express.static(path.join(__dirname, 'client/build')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/build/index.html'));
+});
 
 app.listen(port, () => {
     console.log("server started on port 3001")
