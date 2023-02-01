@@ -9,9 +9,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json())
 app.use(cors());
 
-
 const port = process.env.PORT || 3001
-const uri = "mongodb+srv://charisse_audiophile:uA0TNyPdtpyP57IY@cluster0.4hfu2qw.mongodb.net/?retryWrites=true&w=majority";
+const uri = process.env.uri;
 
 async function connect(){
     try{
