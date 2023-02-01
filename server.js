@@ -10,7 +10,7 @@ app.use(express.json())
 app.use(cors());
 require('dotenv').config();
 
-const port = process.env.PORT || 3001
+const port = process.env.PORT || 3001;
 const uri = process.env.URI;
 console.log(process.env.URI)
 
