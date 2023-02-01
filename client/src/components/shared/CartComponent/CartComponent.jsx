@@ -12,7 +12,7 @@ const CartComponent = () => {
   const [isCheckoutButtonClicked, setIsCheckoutButtonClicked] = useState(false);
 
   useEffect(() => {
-    axios.get('https://audiophile-ecommerce-website.onrender.com:3001/products/get')
+    axios.get('/products/get')
       .then(response => setItems(response.data))
       .catch(error => {
         console.log(error);

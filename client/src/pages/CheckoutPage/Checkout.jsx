@@ -69,7 +69,7 @@ const CheckoutPage = () => {
       setFormData({...formData, cart: cart, grandTotal: totals.grandTotal});
     }
     try {
-      const response = await fetch('https://audiophile-ecommerce-website.onrender.com:3001/submit/checkout', {
+      const response = await fetch('/submit/checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json'},
         body: JSON.stringify(formData)

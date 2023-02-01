@@ -5,7 +5,7 @@ import { CartContext } from '../CartProvider/CartProvider'
 import axios from 'axios'
 
 const ProductAddToCartModal = (props) => {
-
+  
   const navigate = useNavigate()
 
   const { ImageofProduct, productTitle} = props
@@ -15,7 +15,7 @@ const ProductAddToCartModal = (props) => {
   const [productPrice, setProductPrice] = useState(0)
 
   useEffect(() => {
-    axios.get('https://audiophile-ecommerce-website.onrender.com:3001/products/get')
+    axios.get('/products/get')
     .then(response => {
       setData(response.data);
       const filtered = response.data.filter(data => data.name.toLowerCase() === productTitle.toLowerCase());
