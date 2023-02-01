@@ -27,7 +27,8 @@
     "express-cors": "^0.0.3",
     "http-proxy-middleware": "^2.0.6",
     "mongodb": "^4.13.0",
-    "mongoose": "^6.9.0"
+    "mongoose": "^6.9.0",
+    "vercel": "^28.14.1"
   },
   "devDependencies": {
     "file-loader": "^6.2.0"
