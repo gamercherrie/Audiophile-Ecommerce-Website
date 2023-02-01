@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt');
 const cors = require('cors');
 const app = express();
 const bodyParser = require('body-parser');
+const path = require('path');
 
 require('dotenv').config();
 app.use(bodyParser.json());
