@@ -10,7 +10,7 @@ app.use(express.json())
 app.use(cors());
 
 const port = process.env.PORT || 3001
-const uri = process.env.uri;
+const uri = process.env.URI;
 
 async function connect(){
     try{
