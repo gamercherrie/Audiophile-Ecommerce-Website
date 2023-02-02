@@ -24,7 +24,7 @@ const Footer = () => {
           <div className="footer__section-two">
             <div className="footer__description">
                 <p>Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we're open 7 days a week.</p>
-                <p><strong>Copyright 2021. All Rights Reserved</strong></p>
+                <p><strong>Developer: Charisse Calma</strong></p>
             </div>
             <div className="footer__social-icons">
                 <a href="#"><img src={FacebookIcon} /></a>
